@@ -22,15 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bookmark.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/bookmark.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="17" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,7 +70,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="63" selection-start="0" selection-end="83" vertical-scroll-proportion="-3.2692308">
+            <state line="5" column="63" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,10 +85,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="643" selection-end="643" vertical-scroll-proportion="0.79480517">
+            <state line="41" column="60" selection-start="643" selection-end="1513" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.35324675">
               <folding />
             </state>
           </provider>
@@ -123,6 +123,9 @@
     <option name="SKIP" value="false" />
     <option name="VCS_SHOW_CONFIRMATION" value="true" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Rails console: zulsearch" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -136,6 +139,7 @@
         <option value="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -184,6 +188,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="zulsearch" />
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -402,28 +416,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -584,15 +588,6 @@
         <option name="RakeTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -620,6 +615,15 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method>
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method>
         <option name="RakeTask" enabled="false" />
       </method>
@@ -777,7 +781,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2894309" sideWeight="0.67082685" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29512194" sideWeight="0.67082685" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -846,11 +850,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.9/lib/rails/generators/base.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="0" selection-start="9588" selection-end="9588" vertical-scroll-proportion="0.3315508" />
-      </provider>
-    </entry>
     <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.9/lib/rails/generators/named_base.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="0" selection-start="5588" selection-end="5588" vertical-scroll-proportion="0.33333334" />
@@ -898,9 +897,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="8" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/bookmarks_controller.rb">
@@ -908,30 +905,33 @@
         <state line="3" column="6" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="66" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="63" selection-start="0" selection-end="83" vertical-scroll-proportion="-3.2692308">
+        <state line="5" column="63" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="2" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="2" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="66" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="643" selection-end="643" vertical-scroll-proportion="0.79480517">
+        <state line="41" column="60" selection-start="643" selection-end="1513" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.35324675">
           <folding />
         </state>
       </provider>
