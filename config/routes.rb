@@ -1,5 +1,6 @@
 Zulsearch::Application.routes.draw do
   resources :bookmarks
+  match 'newsearch' => 'bookmarks#newsearch'
 
 
   # The priority is based upon order of creation:

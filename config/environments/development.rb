@@ -34,4 +34,6 @@ Zulsearch::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  # Output all debug info
+  config.log_level = :debug
 end

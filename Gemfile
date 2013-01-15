@@ -39,3 +39,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# Use nokogiri gem to read HTML
+gem 'nokogiri'
+
