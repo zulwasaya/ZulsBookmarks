@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
 
   require 'nokogiri'
   require 'open-uri'
-  require 'logger'
+#  require 'logger'
   # GET /bookmarks
   # GET /bookmarks.json
   def index
@@ -85,6 +85,18 @@ class BookmarksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def destroy_all
+    @bookmark = Bookmark.all
+    @bookmark.each {|bookmark| bookmark.destroy}
+    bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org'}])
+
+    respond_to do |format|
+      format.html { redirect_to bookmarks_path }
+      format.json { head :no_content }
+    end
+  end
+
   def newsearch
 
 
@@ -92,25 +104,71 @@ class BookmarksController < ApplicationController
 
       file= "app/assets/bookmarks/bookmarks.html"
       doc = Nokogiri::HTML(open(file))
-      logger = Logger.new('log/logfile.log')
-      logger.debug ("Log file logfile.log created")
+#     logger = Logger.new('log/logfile.log')
+#     logger.debug ("Log file logfile.log created")
       links=doc.css("a")
       hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
       hrefs.each {|ref| logger.debug ref}
-      logger.debug ("End of logfile.log")
+#      logger.debug ("End of logfile.log")
 
 
-      logger.close
+#      logger.close
       hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
 #      if  @bookmark= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'rubyonrails.org'}])
-        @bookmarks=Bookmark.all
+#        @bookmarks=Bookmark.all
 
         format.html { render 'index', notice: 'Bookmark was successfully created.' }
         format.json { render json: @bookmark, status: :created, location: @bookmark }
       else
-        format.html { render action: "newsearch" }
+        format.html { render action: "index" }
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end  }
+      @bookmarks=Bookmark.all
+    end
+
+  end
+
+  def from_html_file
+
+
+    respond_to do |format|
+
+      file= "app/assets/bookmarks/bookmarks.html"
+      doc = Nokogiri::HTML(open(file))
+
+      links=doc.css("a")
+      hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
+      hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
+                          format.html { render 'index', notice: 'Bookmark was successfully created.' }
+                          format.json { render json: @bookmark, status: :created, location: @bookmark }
+                        else
+                          format.html { render action: "index" }
+                          format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+                        end  }
+      @bookmarks=Bookmark.all
+    end
+
+  end
+
+  def to_html_file
+
+
+    respond_to do |format|
+
+      file= "app/assets/bookmarks/bookmarks_output.html"
+      file = File.open(file, "w")
+      @bookmarks=Bookmark.all
+
+      if @bookmarks.each {|bookmark| [bookmark.url].each {|mark| file.write("<p><a href="+mark+">"+mark+"</a></p>"+"\n")} }
+
+          format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
+          format.json { render json: @bookmark, status: :created, location: @bookmark }
+
+          file.close unless file == nil
+      else
+          format.html { render action: "index" }
+          format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+      end
     end
 
   end

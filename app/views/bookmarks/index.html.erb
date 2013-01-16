@@ -2,22 +2,30 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Url</th>
+    <th>SHOW</th>
+    <th>EDIT</th>
+    <th>DESTROY</th>
+    <th>NAME</th>
+    <th>URL</th>
   </tr>
+  <br />
+
+  <%= link_to 'Create New Bookmark# ', new_bookmark_path %>
+  <%= link_to 'Create Bookmarks from internet#', newsearch_path %>
+  <%= link_to 'Create Bookmarks from HTML file# ', from_html_file_path %>
+  <%= link_to 'Write to Bookmarks file from database# ', to_html_file_path %>
+  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>
 
 <% @bookmarks.each do |bookmark| %>
   <tr>
-    <td><%= bookmark.name %></td>
-    <td><a href=http://<%= bookmark.url%> > <%=bookmark.url%> </a></td>
     <td><%= link_to 'Show', bookmark %></td>
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= bookmark.name %></td>
+    <td><a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Bookmark', new_bookmark_path %>
-<%= link_to 'New Bookmark Search', newsearch_path %>

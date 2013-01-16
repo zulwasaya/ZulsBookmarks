@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-   bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'rubyonrails.org'}])
+   bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org'}])
+
 
 
