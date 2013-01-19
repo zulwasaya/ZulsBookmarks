@@ -8,6 +8,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.json
   def index
     @bookmarks = Bookmark.all
+
     if params[:sort]
       @bookmarks=Bookmark.order(params[:sort])
     end
