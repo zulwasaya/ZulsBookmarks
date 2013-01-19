@@ -42,4 +42,6 @@ gem 'jquery-rails'
 
 # Use nokogiri gem to read HTML
 gem 'nokogiri'
+#   A Ruby Gem for parsing Netscape Bookmark File Format
+gem 'markio'
 

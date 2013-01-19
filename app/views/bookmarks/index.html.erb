@@ -1,28 +1,36 @@
-<h1>Listing bookmarks from searching " <%= @bookmarks.first.search %> "</h1>
+<h1>Listing bookmarks " <%= @bookmarks.first.search %> "</h1>
 
 <table>
   <tr>
     <th>SHOW</th>
     <th>EDIT</th>
     <th>DESTROY</th>
-    <th>NAME</th>
-    <th>URL</th>
+    <th>NAME/URL</th>
+
+
   </tr>
   <br />
 
-  <%= link_to 'Create New Bookmark# ', new_bookmark_path %>
-  <%= link_to 'Create Bookmarks from internet#', newsearch_path %>
-  <%= link_to 'Create Bookmarks from HTML file# ', from_html_file_path %>
-  <%= link_to 'Write to Bookmarks file from database# ', to_html_file_path %>
-  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>
+  <%= link_to 'Create New Bookmark ', new_bookmark_path %>    <br />
+  <%= link_to 'Create Bookmarks from internet', newsearch_path %>     <br />
+  <%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %>      <br />
+  <%= link_to 'Write to Bookmarks file from database ', to_html_file_path %>     <br />
+  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>      <br />
+  <%= link_to 'Sort Bookmarks by name', bookmarks_path({:sort=>'name'}) %>      <br />
+  <%= link_to 'Sort Bookmarks by url', bookmarks_path({:sort=>'url'}) %>      <br />
+  <%= link_to 'Sort Bookmarks by folder', bookmarks_path({:sort=>'folder'}) %>      <br />
+  <%= link_to 'Sort Bookmarks by create_date', bookmarks_path({:sort=>'create_date'}) %>      <br />
+  <%= link_to 'Sort Bookmarks by visited_date', bookmarks_path({:sort=>'visited_date'}) %>      <br />
+  <%= link_to 'Sort Bookmarks by modified_date', bookmarks_path({:sort=>'modified_date'}) %>      <br />
+
 
 <% @bookmarks.each do |bookmark| %>
   <tr>
     <td><%= link_to 'Show', bookmark %></td>
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= bookmark.name %></td>
-    <td><a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
+    <td><%= 'Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%= 'Url='+ bookmark.url%> </a></td>
+
   </tr>
 <% end %>
 </table>

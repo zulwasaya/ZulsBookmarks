@@ -3,10 +3,15 @@ class BookmarksController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
 #  require 'logger'
+
   # GET /bookmarks
   # GET /bookmarks.json
   def index
     @bookmarks = Bookmark.all
+    if params[:sort]
+      @bookmarks=Bookmark.order(params[:sort])
+    end
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -110,8 +115,6 @@ class BookmarksController < ApplicationController
       hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
       hrefs.each {|ref| logger.debug ref}
 #      logger.debug ("End of logfile.log")
-
-
 #      logger.close
       hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
 #      if  @bookmark= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'rubyonrails.org'}])
@@ -134,23 +137,26 @@ class BookmarksController < ApplicationController
     respond_to do |format|
 
       file= "app/assets/bookmarks/bookmarks.html"
-      doc = Nokogiri::HTML(open(file))
 
-      links=doc.css("a")
-      hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
-      hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
-                          format.html { render 'index', notice: 'Bookmark was successfully created.' }
-                          format.json { render json: @bookmark, status: :created, location: @bookmark }
-                        else
-                          format.html { render action: "index" }
-                          format.json { render json: @bookmark.errors, status: :unprocessable_entity }
-                        end  }
+      bookmarks = Markio::parse(File.open(file))
+
+
+      bookmarks.each do |ref| if ref.href and @bookmark= Bookmark.create(
+       [{search: 'From html file',name: ref.title,url: ref.href,folder: ref.folders,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
+                               format.html { render 'index', notice: 'Bookmark was successfully created.' }
+                               format.json { render json: @bookmark, status: :created, location: @bookmark }
+                             else
+                               format.html { render action: "index" }
+                               format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+                             end
+                     end
       @bookmarks=Bookmark.all
+      @bookmarks = @bookmarks.uniq.sort_by {|x| [x.url, x.name] }
     end
 
   end
 
-  def to_html_file
+  def backup_to_html_file
 
 
     respond_to do |format|
@@ -158,16 +164,91 @@ class BookmarksController < ApplicationController
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
       @bookmarks=Bookmark.all
+      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
+      file.write("<h1>Bookmarks HTML file</h1>"+"\n")
+#      logger = Logger.new('log/logfile.log')
+#      logger.debug ("Log file logfile.log created")
 
-      if @bookmarks.each {|bookmark| [bookmark.url].each {|mark| file.write("<p><a href="+mark+">"+mark+"</a></p>"+"\n")} }
 
-          format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
-          format.json { render json: @bookmark, status: :created, location: @bookmark }
+      if @bookmarks.each do |bookmark|
+        file.write("<p><a href="+bookmark.url.to_s+">"+bookmark.name.to_s+"</a></p>"+"\n")
 
-          file.close unless file == nil
+#                           logger.debug (bookmark.name)
+#                           logger.debug (bookmark.url)
+      end
+
+
+
+        format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
+        format.json { render json: @bookmark, status: :created, location: @bookmark }
+
+        file.close unless file == nil
+#          logger.debug ("End of logfile.log")
+#          logger.close
       else
-          format.html { render action: "index" }
-          format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+        format.html { render action: "index" }
+        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
+
+  def to_html_file
+
+
+
+    respond_to do |format|
+
+      file= "app/assets/bookmarks/bookmarks_output.html"
+      file = File.open(file, "w")
+      @bookmarks=Bookmark.all
+      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
+#      file.write("<h1>Bookmarks HTML file</h1>"+"\n")
+      logger = Logger.new('log/logfile.log')
+      logger.debug ("Log file logfile.log created")
+
+
+
+      if @bookmarks.each do |mark|
+#        file.write("<p><a href="+bookmark.url.to_s+">"+bookmark.name.to_s+"</a></p>"+"\n")
+#        logger.debug (mark.search)
+#        logger.debug (mark.name)
+#        logger.debug (mark.url)
+#        logger.debug (mark.folder)
+#        logger.debug (mark.create_date)
+#        logger.debug (mark.visited_date)
+#        logger.debug (mark.modified_date)
+
+        builder = Markio::Builder.new
+
+        builder.bookmarks << Markio::Bookmark.create({
+                                                 :title => mark.name,
+                                                 :href  => mark.url,
+                                                 :folders=> mark.folder,
+                                                 :add_date=>mark.create_date,
+                                                 :last_visit=>mark.visited_date,
+                                                 :last_modified=>mark.modified_date
+                                             })
+        file_contents = builder.build_string
+        file.write file_contents
+#        logger.debug (     file_contents   )
+
+      end
+
+
+
+        format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
+        format.json { render json: @bookmark, status: :created, location: @bookmark }
+
+
+
+        file.close unless file == nil
+#          logger.debug ("End of logfile.log")
+#          logger.close
+      else
+        format.html { render action: "index" }
+        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end
     end
 
