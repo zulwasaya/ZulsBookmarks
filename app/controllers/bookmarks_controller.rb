@@ -2,6 +2,8 @@ class BookmarksController < ApplicationController
 
   require 'nokogiri'
   require 'open-uri'
+  require 'date'
+#  require "active_support/core_ext/object/blank"
 #  require 'logger'
 
   # GET /bookmarks
@@ -85,6 +87,18 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
+#      logger = Logger.new('log/logfile.log')
+#      logger.debug ("Log file logfile.log created")
+#      logger.debug (Bookmark.all)
+
+    if (@bookmark=Bookmark.all).blank?
+      folderArray=['ruby']
+      bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
+                                   folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
+    end
+#      logger.debug ("End of logfile.log")
+#      logger.close
+
 
     respond_to do |format|
       format.html { redirect_to bookmarks_url }
@@ -95,7 +109,9 @@ class BookmarksController < ApplicationController
   def destroy_all
     @bookmark = Bookmark.all
     @bookmark.each {|bookmark| bookmark.destroy}
-    bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org'}])
+    folderArray=['ruby']
+    bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
+        folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
 
     respond_to do |format|
       format.html { redirect_to bookmarks_path }
@@ -110,16 +126,13 @@ class BookmarksController < ApplicationController
 
       file= "app/assets/bookmarks/bookmarks.html"
       doc = Nokogiri::HTML(open(file))
-#     logger = Logger.new('log/logfile.log')
-#     logger.debug ("Log file logfile.log created")
+
       links=doc.css("a")
       hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
-      hrefs.each {|ref| logger.debug ref}
-#      logger.debug ("End of logfile.log")
-#      logger.close
+#      hrefs.each {|ref| logger.debug ref}
+
       hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
-#      if  @bookmark= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'rubyonrails.org'}])
-#        @bookmarks=Bookmark.all
+
 
         format.html { render 'index', notice: 'Bookmark was successfully created.' }
         format.json { render json: @bookmark, status: :created, location: @bookmark }
@@ -143,7 +156,7 @@ class BookmarksController < ApplicationController
 
 
       bookmarks.each do |ref| if ref.href and @bookmark= Bookmark.create(
-       [{search: 'From html file',name: ref.title,url: ref.href,folder: ref.folders,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
+       [{search: 'From html file',name: ref.title,url: ref.href,folder: ref.folders.uniq,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
                                format.html { render 'index', notice: 'Bookmark was successfully created.' }
                                format.json { render json: @bookmark, status: :created, location: @bookmark }
                              else
@@ -167,25 +180,17 @@ class BookmarksController < ApplicationController
       @bookmarks=Bookmark.all
       @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
       file.write("<h1>Bookmarks HTML file</h1>"+"\n")
-#      logger = Logger.new('log/logfile.log')
-#      logger.debug ("Log file logfile.log created")
-
 
       if @bookmarks.each do |bookmark|
         file.write("<p><a href="+bookmark.url.to_s+">"+bookmark.name.to_s+"</a></p>"+"\n")
 
-#                           logger.debug (bookmark.name)
-#                           logger.debug (bookmark.url)
       end
-
-
 
         format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }
 
         file.close unless file == nil
-#          logger.debug ("End of logfile.log")
-#          logger.close
+
       else
         format.html { render action: "index" }
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }
@@ -206,20 +211,12 @@ class BookmarksController < ApplicationController
       @bookmarks=Bookmark.all
       @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
 #      file.write("<h1>Bookmarks HTML file</h1>"+"\n")
-      logger = Logger.new('log/logfile.log')
-      logger.debug ("Log file logfile.log created")
+#      logger = Logger.new('log/logfile.log')
+#      logger.debug ("Log file logfile.log created")
 
 
 
       if @bookmarks.each do |mark|
-#        file.write("<p><a href="+bookmark.url.to_s+">"+bookmark.name.to_s+"</a></p>"+"\n")
-#        logger.debug (mark.search)
-#        logger.debug (mark.name)
-#        logger.debug (mark.url)
-#        logger.debug (mark.folder)
-#        logger.debug (mark.create_date)
-#        logger.debug (mark.visited_date)
-#        logger.debug (mark.modified_date)
 
         builder = Markio::Builder.new
 
@@ -233,7 +230,7 @@ class BookmarksController < ApplicationController
                                              })
         file_contents = builder.build_string
         file.write file_contents
-#        logger.debug (     file_contents   )
+
 
       end
 
@@ -245,8 +242,7 @@ class BookmarksController < ApplicationController
 
 
         file.close unless file == nil
-#          logger.debug ("End of logfile.log")
-#          logger.close
+
       else
         format.html { render action: "index" }
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }

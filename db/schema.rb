@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(:version => 20130119035136) do
     t.string   "search"
     t.string   "name"
     t.text     "url"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
     t.string   "folder",        :default => " "
-    t.datetime "create_date"
-    t.datetime "visited_date"
-    t.datetime "modified_date"
+    t.datetime "create_date",   :default => '2013-01-20 01:45:04'
+    t.datetime "visited_date",  :default => '2013-01-20 01:45:04'
+    t.datetime "modified_date", :default => '2013-01-20 01:45:04'
   end
 
 end
