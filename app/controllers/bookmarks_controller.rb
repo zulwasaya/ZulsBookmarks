@@ -3,7 +3,6 @@ class BookmarksController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
   require 'date'
-#  require "active_support/core_ext/object/blank"
 #  require 'logger'
 
   # GET /bookmarks
@@ -12,7 +11,7 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.all
 
     if params[:sort]
-      @bookmarks=Bookmark.order(params[:sort])
+      @bookmarks=Bookmark.all(:order => params[:sort])
     end
 
 
@@ -107,8 +106,9 @@ class BookmarksController < ApplicationController
   end
 
   def destroy_all
-    @bookmark = Bookmark.all
-    @bookmark.each {|bookmark| bookmark.destroy}
+#    @bookmark = Bookmark.all
+#    @bookmark.each {|bookmark| bookmark.destroy}
+    Bookmark.destroy_all
     folderArray=['ruby']
     bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
         folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
@@ -145,7 +145,7 @@ class BookmarksController < ApplicationController
 
   end
 
-  def from_html_file
+  def from_html_file  # to database
 
 
     respond_to do |format|
@@ -165,7 +165,7 @@ class BookmarksController < ApplicationController
                              end
                      end
       @bookmarks=Bookmark.all
-      @bookmarks = @bookmarks.uniq.sort_by {|x| [x.url, x.name] }
+#      @bookmarks = @bookmarks.uniq.sort_by {|x| [x.url, x.name] }
     end
 
   end
@@ -178,7 +178,7 @@ class BookmarksController < ApplicationController
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
       @bookmarks=Bookmark.all
-      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
+#      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
       file.write("<h1>Bookmarks HTML file</h1>"+"\n")
 
       if @bookmarks.each do |bookmark|
@@ -208,19 +208,14 @@ class BookmarksController < ApplicationController
 
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
-      @bookmarks=Bookmark.all
-      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
-#      file.write("<h1>Bookmarks HTML file</h1>"+"\n")
-#      logger = Logger.new('log/logfile.log')
-#      logger.debug ("Log file logfile.log created")
-
+      @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
 
 
       if @bookmarks.each do |mark|
 
-        builder = Markio::Builder.new
+                          builder = Markio::Builder.new
 
-        builder.bookmarks << Markio::Bookmark.create({
+                          builder.bookmarks << Markio::Bookmark.create({
                                                  :title => mark.name,
                                                  :href  => mark.url,
                                                  :folders=> mark.folder,
@@ -228,18 +223,14 @@ class BookmarksController < ApplicationController
                                                  :last_visit=>mark.visited_date,
                                                  :last_modified=>mark.modified_date
                                              })
-        file_contents = builder.build_string
-        file.write file_contents
 
 
-      end
-
-
+                          file_contents = builder.build_string
+                          file.write file_contents
+                        end
 
         format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }
-
-
 
         file.close unless file == nil
 
@@ -248,6 +239,5 @@ class BookmarksController < ApplicationController
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end
     end
-
   end
 end

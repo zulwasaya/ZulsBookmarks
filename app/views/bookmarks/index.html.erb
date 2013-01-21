@@ -1,5 +1,6 @@
 <h1>Listing bookmarks " <%= @bookmarks.first.search %> "</h1>
 
+
 <table>
   <tr>
     <th>SHOW</th>
@@ -30,7 +31,7 @@
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
-      <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%= 'Url='+ bookmark.url%> </a></td>
+      <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
 
   </tr>
 <% end %>
