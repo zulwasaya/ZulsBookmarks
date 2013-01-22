@@ -45,6 +45,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new
     @bookmark.origin='database-created'
     @bookmark.url='http://'
+    @bookmark.folder=[" "]
 
     respond_to do |format|
       format.html # new.html.erb
