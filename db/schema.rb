@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119035136) do
+ActiveRecord::Schema.define(:version => 20130121185228) do
 
   create_table "bookmarks", :force => true do |t|
-    t.string   "search"
+    t.string   "origin"
     t.string   "name"
     t.text     "url"
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
     t.string   "folder",        :default => " "
-    t.datetime "create_date",   :default => '2013-01-20 01:45:04'
-    t.datetime "visited_date",  :default => '2013-01-20 01:45:04'
-    t.datetime "modified_date", :default => '2013-01-20 01:45:04'
+    t.datetime "create_date",   :default => '2013-01-22 01:02:48'
+    t.datetime "visited_date",  :default => '2013-01-22 01:02:48'
+    t.datetime "modified_date", :default => '2013-01-22 01:02:48'
   end
 
 end

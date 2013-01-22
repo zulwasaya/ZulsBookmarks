@@ -3,17 +3,24 @@ class BookmarksController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
   require 'date'
-#  require 'logger'
+  require 'logger'
 
   # GET /bookmarks
   # GET /bookmarks.json
   def index
+#    Bookmark.destroy_all
     @bookmarks = Bookmark.all
+
 
     if params[:sort]
       @bookmarks=Bookmark.all(:order => params[:sort])
     end
 
+#       logger = Logger.new('log/logfile.log')
+#       logger.debug ("Log file logfile.log created")
+#       @bookmarks.each {|mark|logger.debug mark.name}
+#       logger.debug ("End of logfile.log")
+#       logger.close
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,6 +43,8 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.json
   def new
     @bookmark = Bookmark.new
+    @bookmark.origin='database-created'
+    @bookmark.url='http://'
 
     respond_to do |format|
       format.html # new.html.erb
@@ -47,6 +56,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1/edit
   def edit
     @bookmark = Bookmark.find(params[:id])
+    @bookmark.origin='database-updated'
   end
 
   # POST /bookmarks
@@ -86,17 +96,14 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-#      logger = Logger.new('log/logfile.log')
-#      logger.debug ("Log file logfile.log created")
-#      logger.debug (Bookmark.all)
 
-    if (@bookmark=Bookmark.all).blank?
-      folderArray=['ruby']
-      bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
-                                   folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
-    end
-#      logger.debug ("End of logfile.log")
-#      logger.close
+
+#    if (@bookmark=Bookmark.all).blank?
+#      folderArray=['ruby']
+#      bookmarks= Bookmark.create([{origin: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
+#                                   folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
+#    end
+
 
 
     respond_to do |format|
@@ -106,12 +113,11 @@ class BookmarksController < ApplicationController
   end
 
   def destroy_all
-#    @bookmark = Bookmark.all
-#    @bookmark.each {|bookmark| bookmark.destroy}
+
     Bookmark.destroy_all
-    folderArray=['ruby']
-    bookmarks= Bookmark.create([{search: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
-        folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
+#    folderArray=['ruby']
+#    bookmarks= Bookmark.create([{origin: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
+#        folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
 
     respond_to do |format|
       format.html { redirect_to bookmarks_path }
@@ -131,7 +137,7 @@ class BookmarksController < ApplicationController
       hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
 #      hrefs.each {|ref| logger.debug ref}
 
-      hrefs.each {|ref| if  @bookmark= Bookmark.create([{search: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
+      hrefs.each {|ref| if  @bookmark= Bookmark.create([{origin: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
 
 
         format.html { render 'index', notice: 'Bookmark was successfully created.' }
@@ -144,6 +150,14 @@ class BookmarksController < ApplicationController
     end
 
   end
+  def searchbookmarks
+   @bookmarks=Bookmark.where('name LIKE?',"%#{params[:search_bookmarks]}%" )
+
+     respond_to do |format|
+       format.html { render action: "index" }# index.html.erb
+       format.json { head :no_content }
+     end
+   end
 
   def from_html_file  # to database
 
@@ -156,7 +170,7 @@ class BookmarksController < ApplicationController
 
 
       bookmarks.each do |ref| if ref.href and @bookmark= Bookmark.create(
-       [{search: 'From html file',name: ref.title,url: ref.href,folder: ref.folders.uniq,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
+       [{origin: 'From html file',name: ref.title,url: ref.href,folder: ref.folders.uniq,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
                                format.html { render 'index', notice: 'Bookmark was successfully created.' }
                                format.json { render json: @bookmark, status: :created, location: @bookmark }
                              else

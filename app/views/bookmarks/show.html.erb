@@ -6,14 +6,33 @@
   <%= @bookmark.name %>
 </p>
 <p>
-  <b>Folder:</b>
+  <b>Folders:</b>
   <%= @bookmark.folder %>
 </p>
 
+<p>
+  <b>Original Source:</b>
+  <%= @bookmark.origin %>
+</p>
+
+<p>
+  <b>Date created:</b>
+  <%= @bookmark.create_date %>
+</p>
+
+<p>
+  <b>Date visited:</b>
+  <%= @bookmark.visited_date %>
+</p>
+
+<p>
+  <b>Date modified:</b>
+  <%= @bookmark.modified_date %>
+</p>
 
 <p>
   <b>Url:</b>
-  <a href=http://<%= @bookmark.url%> > <%=@bookmark.url%> </a>
+  <a href=<%= @bookmark.url%> > <%=@bookmark.url%> </a>
 </p>
 
 

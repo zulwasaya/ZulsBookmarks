@@ -1,4 +1,5 @@
-<h1>Listing bookmarks " <%= @bookmarks.first.search %> "</h1>
+<h1>Listing bookmarks database </h1>
+
 
 
 <table>
@@ -11,18 +12,19 @@
 
   </tr>
   <br />
-
-  <%= link_to 'Create New Bookmark ', new_bookmark_path %>    <br />
-  <%= link_to 'Create Bookmarks from internet', newsearch_path %>     <br />
-  <%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %>      <br />
-  <%= link_to 'Write to Bookmarks file from database ', to_html_file_path %>     <br />
-  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>      <br />
-  <%= link_to 'Sort Bookmarks by name', bookmarks_path({:sort=>'name'}) %>      <br />
-  <%= link_to 'Sort Bookmarks by url', bookmarks_path({:sort=>'url'}) %>      <br />
-  <%= link_to 'Sort Bookmarks by folder', bookmarks_path({:sort=>'folder'}) %>      <br />
-  <%= link_to 'Sort Bookmarks by create_date', bookmarks_path({:sort=>'create_date'}) %>      <br />
-  <%= link_to 'Sort Bookmarks by visited_date', bookmarks_path({:sort=>'visited_date'}) %>      <br />
-  <%= link_to 'Sort Bookmarks by modified_date', bookmarks_path({:sort=>'modified_date'}) %>      <br />
+  <%= link_to 'List all Bookmarks url===', bookmarks_path %>
+  <%= link_to 'Search Bookmarks url===', searchbookmarks_path({:search_bookmarks =>'ruby'}) %>                             <br />
+  <%= link_to 'Create New Bookmark=== ', new_bookmark_path %>
+  <%= link_to 'Create Bookmarks from internet===', newsearch_path %>                                                       <br />
+  <%= link_to 'Create Bookmarks from HTML file=== ', from_html_file_path %>
+  <%= link_to 'Write to Bookmarks file from database=== ', to_html_file_path %>                                            <br />
+  <%= link_to 'Destroy all Bookmarks from database===  ', destroy_all_path %>                                              <br />
+  <%= link_to 'Sort Bookmarks by name===', bookmarks_path({:sort=>'name ASC'}) %>
+  <%= link_to 'Sort Bookmarks by url===', bookmarks_path({:sort=>'url ASC'}) %>
+  <%= link_to 'Sort Bookmarks by folder===', bookmarks_path({:sort=>'folder ASC'}) %>                                      <br />
+  <%= link_to 'Sort Bookmarks by create_date===', bookmarks_path({:sort=>'create_date DESC'}) %>
+  <%= link_to 'Sort Bookmarks by visited_date===', bookmarks_path({:sort=>'visited_date DESC'}) %>
+  <%= link_to 'Sort Bookmarks by modified_date===', bookmarks_path({:sort=>'modified_date DESC'}) %>                       <br />
 
 
 <% @bookmarks.each do |bookmark| %>
@@ -31,7 +33,7 @@
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
-      <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
+            <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
 
   </tr>
 <% end %>

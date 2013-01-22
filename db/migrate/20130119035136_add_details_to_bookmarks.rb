@@ -5,4 +5,5 @@ class AddDetailsToBookmarks < ActiveRecord::Migration
     add_column :bookmarks, :visited_date, :datetime, :default => Time.now
     add_column :bookmarks, :modified_date, :datetime, :default => Time.now
   end
+
 end

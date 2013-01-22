@@ -8,4 +8,5 @@ class CreateBookmarks < ActiveRecord::Migration
       t.timestamps
     end
   end
+
 end
