@@ -1,5 +1,5 @@
 
-<div class="form_row">
+<div class="form_search">
   <%= form_tag({:action => :searchbookmarks} ,:method=>"get") do %>
       <%= label_tag(:target, "Search Field:") %>
       <% [ 'folder', 'url', 'name' ].each do |target| %>
@@ -8,7 +8,7 @@
       <% end %>
       </br>
       <%= label_tag(:searchform, "Search for string:") %>
-      <%= text_field_tag(:search_bookmarks) %>
+      <%= text_field_tag(:search_string) %>
       <%=  submit_tag ( 'Search') %>
   <% end %>
   </div>

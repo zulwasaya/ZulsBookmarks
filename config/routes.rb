@@ -1,6 +1,8 @@
 Zulsearch::Application.routes.draw do
   resources :bookmarks
   match 'newsearch' => 'bookmarks#newsearch'
+  match 'sortform' => 'bookmarks#sortform'
+  match 'sortbookmarks' => 'bookmarks#sortbookmarks'
   match 'searchform' => 'bookmarks#searchform'
   match 'searchbookmarks' => 'bookmarks#searchbookmarks'
   match 'from_html_file' => 'bookmarks#from_html_file'

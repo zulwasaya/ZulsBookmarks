@@ -1,5 +1,10 @@
 <h1>Listing bookmarks database </h1>
-
+<% if @search_string and @search_target then %>
+    <h1>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </h1>
+   <% end %>
+<% if @sort_field and @sort_order then %>
+    <h1>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </h1>
+<% end %>
 
 
 <table>
@@ -13,20 +18,16 @@
   </tr>
                                                                                                                         <br />
 
-  <%= link_to 'Search Bookmarks', searchform_path %>                                                                    <br />
-                                                                                                                        <br />
+  <%= link_to 'Search Bookmarks', searchform_path %>
+  <br />
+  <%= link_to 'Sort Bookmarks', sortform_path %>
+  <br />
   <%= link_to 'Create New Bookmark===> ', new_bookmark_path %>
   <%= link_to 'Create Bookmarks from internet===>', newsearch_path %>                                                   <br />
   <%= link_to 'Create Bookmarks from HTML file===> ', from_html_file_path %>
   <%= link_to 'Write to Bookmarks file from database===> ', to_html_file_path %>                                        <br />
   <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>                                              <br />
-                                                                                                                        <br />
-  <%= link_to 'Sort Bookmarks by name===>', bookmarks_path({:sort=>'name ASC'}) %>
-  <%= link_to 'Sort Bookmarks by url===>', bookmarks_path({:sort=>'url ASC'}) %>
-  <%= link_to 'Sort Bookmarks by folder===>', bookmarks_path({:sort=>'folder ASC'}) %>                                  <br />
-  <%= link_to 'Sort Bookmarks by create_date===>', bookmarks_path({:sort=>'create_date DESC'}) %>
-  <%= link_to 'Sort Bookmarks by visited_date===>', bookmarks_path({:sort=>'visited_date DESC'}) %>
-  <%= link_to 'Sort Bookmarks by modified_date===>', bookmarks_path({:sort=>'modified_date DESC'}) %>                   <br />
+
                                                                                                                         <br />
   <%= link_to 'Back to list all Bookmarks', bookmarks_path %>                                                           <br />
                                                                                                                         <br/>

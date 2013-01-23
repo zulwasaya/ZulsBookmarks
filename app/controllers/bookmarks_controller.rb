@@ -18,11 +18,6 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.all
 
 
-    if params[:sort]
-      @bookmarks=Bookmark.all(:order => params[:sort])
-    end
-
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @bookmarks }
@@ -44,6 +39,14 @@ class BookmarksController < ApplicationController
 
     respond_to do |format|
       format.html # searchform.html.erb
+      format.json { render json: @bookmark }
+    end
+  end
+
+  def sortform
+
+    respond_to do |format|
+      format.html # sortform.html.erb
       format.json { render json: @bookmark }
     end
   end
@@ -161,22 +164,42 @@ class BookmarksController < ApplicationController
     end
 
   end
-  def searchbookmarks
-     logger = Logger.new('log/logfile.log')
-     logger.debug ("Log file logfile.log created")
-     logger.debug "%#{params[:search_bookmarks]}%"
-     logger.debug "#{params[:target]}"
-     logger.debug ("End of logfile.log")
-     logger.close
+  def sortbookmarks
 
-#  @bookmarks=Bookmark.where("%#{params[:target]}% LIKE?","%#{params[:search_bookmarks]}%" )
-  @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_bookmarks]}%" )
-#  @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
+    @sort_field="#{params[:sort]}"
+    @sort_order="#{params[:sort_order]}"
+
+#         logger = Logger.new('log/logfile.log')
+#         logger.debug ("Log file logfile.log created")
+#         logger.debug ("#{params[:sort]}" +" " + "#{params[:sort_order]}")
+#         logger.debug ("lower(#{@sort_field})"+" "+" #{@sort_order}")
+#         logger.debug "#{params[:sort_order]}"
+#         logger.debug ("End of logfile.log")
+#         logger.close
+
+#      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
+
+
+      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
+
      respond_to do |format|
        format.html { render action: "index" }# index.html.erb
        format.json { head :no_content }
      end
-   end
+  end
+
+  def searchbookmarks
+
+    @search_target="#{params[:target]}"
+    @search_string="#{params[:search_string]}"
+
+    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
+#  @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
+    respond_to do |format|
+      format.html { render action: "index" }# index.html.erb
+      format.json { head :no_content }
+    end
+  end
 
   def from_html_file  # to database
 
