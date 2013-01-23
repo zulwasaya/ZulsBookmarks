@@ -177,10 +177,10 @@ class BookmarksController < ApplicationController
 #         logger.debug ("End of logfile.log")
 #         logger.close
 
-#      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
+      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
 
 
-      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
+#      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
 
      respond_to do |format|
        format.html { render action: "index" }# index.html.erb
@@ -194,7 +194,7 @@ class BookmarksController < ApplicationController
     @search_string="#{params[:search_string]}"
 
     @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
-#  @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
+#    @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
     respond_to do |format|
       format.html { render action: "index" }# index.html.erb
       format.json { head :no_content }
