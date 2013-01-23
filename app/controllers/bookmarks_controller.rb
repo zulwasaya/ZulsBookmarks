@@ -176,12 +176,19 @@ class BookmarksController < ApplicationController
 #         logger.debug "#{params[:sort_order]}"
 #         logger.debug ("End of logfile.log")
 #         logger.close
+    if @sort_field == 'create_date' or @sort_field == 'visited_date' or @sort_field == 'modified_date'
 
       @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
+#      logger.debug ("date fields")
+    else
+
+      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
+#      logger.debug ("Non-date fields")
+    end
 
 
-#      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
-
+#    logger.debug ("End of logfile.log")
+#    logger.close
      respond_to do |format|
        format.html { render action: "index" }# index.html.erb
        format.json { head :no_content }
@@ -194,7 +201,7 @@ class BookmarksController < ApplicationController
     @search_string="#{params[:search_string]}"
 
     @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
-#    @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
+
     respond_to do |format|
       format.html { render action: "index" }# index.html.erb
       format.json { head :no_content }
