@@ -4,8 +4,14 @@ class BookmarksController < ApplicationController
   require 'open-uri'
   require 'date'
   require 'logger'
+#       logger = Logger.new('log/logfile.log')
+#       logger.debug ("Log file logfile.log created")
+#       @bookmarks.each {|mark|logger.debug mark.name}
+#       logger.debug ("End of logfile.log")
+#       logger.close
 
-  # GET /bookmarks
+
+# GET /bookmarks
   # GET /bookmarks.json
   def index
 #    Bookmark.destroy_all
@@ -16,11 +22,6 @@ class BookmarksController < ApplicationController
       @bookmarks=Bookmark.all(:order => params[:sort])
     end
 
-#       logger = Logger.new('log/logfile.log')
-#       logger.debug ("Log file logfile.log created")
-#       @bookmarks.each {|mark|logger.debug mark.name}
-#       logger.debug ("End of logfile.log")
-#       logger.close
 
     respond_to do |format|
       format.html # index.html.erb
@@ -38,6 +39,15 @@ class BookmarksController < ApplicationController
       format.json { render json: @bookmark }
     end
   end
+
+  def searchform
+
+    respond_to do |format|
+      format.html # searchform.html.erb
+      format.json { render json: @bookmark }
+    end
+  end
+
 
   # GET /bookmarks/new
   # GET /bookmarks/new.json
@@ -152,8 +162,16 @@ class BookmarksController < ApplicationController
 
   end
   def searchbookmarks
-   @bookmarks=Bookmark.where('name LIKE?',"%#{params[:search_bookmarks]}%" )
+     logger = Logger.new('log/logfile.log')
+     logger.debug ("Log file logfile.log created")
+     logger.debug "%#{params[:search_bookmarks]}%"
+     logger.debug "#{params[:target]}"
+     logger.debug ("End of logfile.log")
+     logger.close
 
+#  @bookmarks=Bookmark.where("%#{params[:target]}% LIKE?","%#{params[:search_bookmarks]}%" )
+  @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_bookmarks]}%" )
+#  @bookmarks=Bookmark.where("name LIKE?","%#{params[:search_bookmarks]}%" )
      respond_to do |format|
        format.html { render action: "index" }# index.html.erb
        format.json { head :no_content }

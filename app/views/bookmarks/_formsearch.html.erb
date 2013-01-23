@@ -1,6 +1,14 @@
 
-
-<% form_tag :action => :searchbookmarks do %>
-    <%= text_area :searchform, :search_bookmarks,:cols=>'40',:rows=>'1' %>
-    <%=  submit_tag "Submit search" %>
-<% end %>
+<div class="form_row">
+  <%= form_tag({:action => :searchbookmarks} ,:method=>"get") do %>
+      <%= label_tag(:target, "Search Field:") %>
+      <% [ 'folder', 'url', 'name' ].each do |target| %>
+          <%= radio_button_tag 'target', target, @target == target,:checked => 'checked' %>
+      <%= target.humanize %>
+      <% end %>
+      </br>
+      <%= label_tag(:searchform, "Search for string:") %>
+      <%= text_field_tag(:search_bookmarks) %>
+      <%=  submit_tag ( 'Search') %>
+  <% end %>
+  </div>
