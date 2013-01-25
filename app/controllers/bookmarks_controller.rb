@@ -1,9 +1,12 @@
 class BookmarksController < ApplicationController
 
-  require 'nokogiri'
   require 'open-uri'
   require 'date'
   require 'logger'
+  require "net/http"
+
+
+
 #       logger = Logger.new('log/logfile.log')
 #       logger.debug ("Log file logfile.log created")
 #       @bookmarks.each {|mark|logger.debug mark.name}
@@ -139,43 +142,35 @@ class BookmarksController < ApplicationController
     end
   end
 
-  def newsearch
-
-
-    respond_to do |format|
-
-      file= "app/assets/bookmarks/bookmarks.html"
-      doc = Nokogiri::HTML(open(file))
-
-      links=doc.css("a")
-      hrefs = links.map {|link| link.attribute('href').to_s}.uniq.sort.delete_if{|href| href.empty?}
-#      hrefs.each {|ref| logger.debug ref}
-
-      hrefs.each {|ref| if  @bookmark= Bookmark.create([{origin: 'Bookmarks html file',name: 'Bookmarks',url: ref}])
-
-
-        format.html { render 'index', notice: 'Bookmark was successfully created.' }
-        format.json { render json: @bookmark, status: :created, location: @bookmark }
-      else
-        format.html { render action: "index" }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
-      end  }
-      @bookmarks=Bookmark.all
+  def check_urls
+    @bookmarks = Bookmark.all
+#    logger = Logger.new('log/logfile.log')
+#    logger.debug ("Log file logfile.log created")
+    @bookmarks.each do |href|
+#      logger.debug (href.url)
+      begin
+      hurl = URI.parse(href.url)
+      req = Net::HTTP.new(hurl.host, hurl.port)
+      res = req.request_head(hurl.path)
+      rescue
+#        logger.debug("url is not ok")
+      end
     end
+#    logger.debug ("End of logfile.log")
+#    logger.close
+      respond_to do |format|
+        format.html { render action: "index" }# index.html.erb
+        format.json { render json: @bookmarks }
+      end
 
   end
+
   def sortbookmarks
 
     @sort_field="#{params[:sort]}"
     @sort_order="#{params[:sort_order]}"
 
-#         logger = Logger.new('log/logfile.log')
-#         logger.debug ("Log file logfile.log created")
-#         logger.debug ("#{params[:sort]}" +" " + "#{params[:sort_order]}")
-#         logger.debug ("lower(#{@sort_field})"+" "+" #{@sort_order}")
-#         logger.debug "#{params[:sort_order]}"
-#         logger.debug ("End of logfile.log")
-#         logger.close
+
     if @sort_field == 'create_date' or @sort_field == 'visited_date' or @sort_field == 'modified_date'
 
       @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
@@ -218,7 +213,12 @@ class BookmarksController < ApplicationController
       bookmarks = Markio::parse(File.open(file))
 
 
-      bookmarks.each do |ref| if ref.href and @bookmark= Bookmark.create(
+      bookmarks.each do |ref|
+                             if ref.href
+                               ref.href=ref.href.sub('https','http')
+                             end
+
+                             if ref.href and @bookmark= Bookmark.create(
        [{origin: 'From html file',name: ref.title,url: ref.href,folder: ref.folders.uniq,create_date: ref.add_date,visited_date: ref.last_visit,modified_date: ref.last_modified}])
                                format.html { render 'index', notice: 'Bookmark was successfully created.' }
                                format.json { render json: @bookmark, status: :created, location: @bookmark }
@@ -233,7 +233,7 @@ class BookmarksController < ApplicationController
 
   end
 
-  def backup_to_html_file
+  def backup_to_simple_html_file
 
 
     respond_to do |format|

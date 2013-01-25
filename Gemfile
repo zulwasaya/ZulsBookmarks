@@ -38,10 +38,19 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
 
 # Use nokogiri gem to read HTML
-gem 'nokogiri'
+# gem 'nokogiri'
 #   A Ruby Gem for parsing Netscape Bookmark File Format
 gem 'markio'
-
+#   A Ruby Gem for accessing duck-duck-go
+# gem 'duck-duck-go'
+# A ruby gem for thumbnail website images
+# gem 'link_thumbnail'
+# A ruby gem link parser
+# gem 'linkser'
+# A local gem  kauperts_link_checker  compiled and installed locally  for checking urls
+# gem 'kauperts_link_checker'
+# ruby gem to check url status
+# gem 'check_http'
