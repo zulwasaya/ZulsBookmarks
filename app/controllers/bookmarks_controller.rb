@@ -162,9 +162,9 @@ class BookmarksController < ApplicationController
     @bookmarks.each do |href|
 #      logger.debug (href.url)
       begin
-      hurl = URI.parse(href.url)
-      req = Net::HTTP.new(hurl.host, hurl.port)
-      res = req.request_head(hurl.path)
+#      hurl = URI.parse(href.url)
+#      req = Net::HTTP.new(hurl.host, hurl.port)
+#      res = req.request_head(hurl.path)
       rescue
 #        logger.debug("url is not ok")
       end
