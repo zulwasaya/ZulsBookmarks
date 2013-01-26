@@ -25,8 +25,8 @@
   <%= link_to 'Create New Bookmark ', new_bookmark_path %>                                                          <br />
   <%= link_to 'Check and validate all Bookmarks via internet', check_urls_path %>                                      <br />
   <%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %>                                            <br />
-  <%= link_to 'Write Bookmarks database to HTML file ', to_html_file_path %>                                             <br />
-  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path %>                                              <br />
+  <%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %>                                             <br />
+  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path, data: { confirm: 'Are you sure?' } %>                                              <br />
                                                                                                                         <br />
   <%= link_to 'Back to list all Bookmarks', bookmarks_path %>                                                           <br />
                                                                                                                         <br/>
@@ -35,8 +35,8 @@
     <td><%= link_to 'Show', bookmark %></td>
     <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
     <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
-            <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a></td>
+    <td><%='Origin='%> <%= bookmark.origin%> <br /> <%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
+        <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br />></td>
 
   </tr>
 <% end %>

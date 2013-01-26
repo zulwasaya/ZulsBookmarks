@@ -7,6 +7,7 @@ class BookmarksController < ApplicationController
 
 
 
+
 #       logger = Logger.new('log/logfile.log')
 #       logger.debug ("Log file logfile.log created")
 #       @bookmarks.each {|mark|logger.debug mark.name}
@@ -72,14 +73,20 @@ class BookmarksController < ApplicationController
 
   # GET /bookmarks/1/edit
   def edit
+
     @bookmark = Bookmark.find(params[:id])
+
     @bookmark.origin='database-updated'
+
   end
 
   # POST /bookmarks
   # POST /bookmarks.json
   def create
+
     @bookmark = Bookmark.new(params[:bookmark])
+# remove backslashes to reconstruct array
+    @bookmark.folder = eval(@bookmark.folder)
 
     respond_to do |format|
       if @bookmark.save
@@ -95,8 +102,13 @@ class BookmarksController < ApplicationController
   # PUT /bookmarks/1
   # PUT /bookmarks/1.json
   def update
-    @bookmark = Bookmark.find(params[:id])
 
+    @bookmark = Bookmark.find(params[:id])
+# convert folder array to pure strings ie remove back-slash characters
+
+#    @bookmark.folder.each {|f| f=eval(f)}
+
+    @bookmark.modified_date=Time.now
     respond_to do |format|
       if @bookmark.update_attributes(params[:bookmark])
         format.html { redirect_to @bookmark, notice: 'Bookmark was successfully updated.' }
@@ -106,6 +118,7 @@ class BookmarksController < ApplicationController
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /bookmarks/1
@@ -203,7 +216,7 @@ class BookmarksController < ApplicationController
     end
   end
 
-  def from_html_file  # to database
+  def oldfrom_html_file  # to database
 
 
     respond_to do |format|
@@ -228,7 +241,7 @@ class BookmarksController < ApplicationController
                              end
                      end
       @bookmarks=Bookmark.all
-#      @bookmarks = @bookmarks.uniq.sort_by {|x| [x.url, x.name] }
+
     end
 
   end
@@ -249,7 +262,7 @@ class BookmarksController < ApplicationController
 
       end
 
-        format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
+        format.html { render 'index', notice: "Bookmarks were successfully filed "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }
 
         file.close unless file == nil
@@ -265,12 +278,9 @@ class BookmarksController < ApplicationController
 
   def to_html_file
 
-
-
-    respond_to do |format|
-
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
+# Order records by folder case insensitive before writing out file
       @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
 
 
@@ -290,17 +300,52 @@ class BookmarksController < ApplicationController
 
                           file_contents = builder.build_string
                           file.write file_contents
-                        end
-
-        format.html { render 'index', notice: "Bookmarks were successfully filed to #(file) "}
+                          end
+      end
+      respond_to do |format|
+        format.html { render 'index', notice: "Bookmarks were successfully filed "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }
 
         file.close unless file == nil
 
-      else
-        format.html { render action: "index" }
-        format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end
-    end
   end
-end
+
+  def from_html_file  # to database
+
+
+
+
+      file= "app/assets/bookmarks/bookmarks.html"
+
+      bookmarks = Markio::parse(File.open(file))
+
+
+      bookmarks.each do |ref|
+
+
+        if ref.href
+          ref.href=ref.href.sub('https','http')
+          @bookmark=Bookmark.new
+          @bookmark.origin= 'From html file'
+          @bookmark.name=ref.title
+          @bookmark.url=ref.href
+          @bookmark.folder=ref.folders.uniq
+          @bookmark.create_date=ref.add_date
+          @bookmark.visited_date=ref.last_visit
+          @bookmark.modified_date=ref.last_modified
+          @bookmark.save
+
+
+        end
+       end
+      @bookmarks=Bookmark.all
+      respond_to do |format|
+        format.html { render 'index', notice: "Bookmarks were successfully created "}
+        format.json { render json: @bookmark, status: :created, location: @bookmark }
+      end
+
+      end
+  end
+
+
