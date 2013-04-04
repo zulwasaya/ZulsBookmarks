@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(:version => 20130121185228) do
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
     t.string   "folder"
-    t.datetime "create_date",   :default => '2013-01-26 03:13:08'
-    t.datetime "visited_date",  :default => '2013-01-26 03:13:08'
-    t.datetime "modified_date", :default => '2013-01-26 03:13:08'
+    t.datetime "create_date",   :default => '2013-04-04 16:48:42'
+    t.datetime "visited_date",  :default => '2013-04-04 16:48:42'
+    t.datetime "modified_date", :default => '2013-04-04 16:48:42'
   end
 
 end
