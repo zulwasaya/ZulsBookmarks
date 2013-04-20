@@ -11,18 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121185228) do
+ActiveRecord::Schema.define(:version => 20130407005655) do
+
+  create_table "authorizations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "bookmarks", :force => true do |t|
+    t.integer  "user_id"
     t.string   "origin"
     t.string   "name"
     t.text     "url"
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
     t.string   "folder"
-    t.datetime "create_date",   :default => '2013-04-04 16:48:42'
-    t.datetime "visited_date",  :default => '2013-04-04 16:48:42'
-    t.datetime "modified_date", :default => '2013-04-04 16:48:42'
+    t.datetime "create_date",   :default => '2013-04-20 03:28:15'
+    t.datetime "visited_date",  :default => '2013-04-20 03:28:15'
+    t.datetime "modified_date", :default => '2013-04-20 03:28:15'
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "nickname"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

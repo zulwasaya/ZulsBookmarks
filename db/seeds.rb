@@ -5,8 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-   folderArray=['ruby']
-   bookmarks= Bookmark.create([{origin: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
-                                folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
+
+
+#  folderArray=['ruby']
+#   bookmarks= Bookmark.create([{origin: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
+#                   user_id:'1',folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
 
 

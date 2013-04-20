@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
     "doc/site/images/paren_language_output.png",
     "doc/site/images/pivotal.gif",
     "doc/site/images/top_background.png",
-    "doc/site/index.html",
+    "doc/site/index.html.old",
     "doc/site/pitfalls_and_advanced_techniques.html",
     "doc/site/robots.txt",
     "doc/site/screen.css",

@@ -28,8 +28,8 @@ class Numeric
   #   1.year.to_f.from_now
   #
   # In such cases, Ruby's core
-  # Date[http://stdlib.rubyonrails.org/libdoc/date/rdoc/index.html] and
-  # Time[http://stdlib.rubyonrails.org/libdoc/time/rdoc/index.html] should be used for precision
+  # Date[http://stdlib.rubyonrails.org/libdoc/date/rdoc/index.html.old] and
+  # Time[http://stdlib.rubyonrails.org/libdoc/time/rdoc/index.html.old] should be used for precision
   # date and time arithmetic
   def seconds
     ActiveSupport::Duration.new(self, [[:seconds, self]])

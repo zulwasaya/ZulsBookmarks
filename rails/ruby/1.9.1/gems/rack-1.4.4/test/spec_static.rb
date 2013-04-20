@@ -16,7 +16,7 @@ describe Rack::Static do
   root = File.expand_path(File.dirname(__FILE__))
 
   OPTIONS = {:urls => ["/cgi"], :root => root}
-  STATIC_OPTIONS = {:urls => [""], :root => "#{root}/static", :index => 'index.html'}
+  STATIC_OPTIONS = {:urls => [""], :root => "#{root}/static", :index => 'index.html.old'}
   HASH_OPTIONS = {:urls => {"/cgi/sekret" => 'cgi/test'}, :root => root}
 
   @request = Rack::MockRequest.new(static(DummyApp.new, OPTIONS))
@@ -90,7 +90,7 @@ describe Rack::Static do
 
   it "supports header rule :all" do
     # Headers for all files via :all shortcut
-    res = @header_request.get('/cgi/assets/index.html')
+    res = @header_request.get('/cgi/assets/index.html.old')
     res.should.be.ok
     res.headers['Cache-Control'].should == 'public, max-age=100'
   end

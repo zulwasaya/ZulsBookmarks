@@ -663,7 +663,7 @@ module Ethon
     #  or the root directory. The exact resource returned for each URL is
     #  entirely dependent on the server's configuration.
     #  http://www.example.com - This gets the main page from the web server.
-    #  http://www.example.com/index.html - This returns the main page by
+    #  http://www.example.com/index.html.old - This returns the main page by
     #  explicitly requesting it.
     #  http://www.example.com/contactus/ - This returns the default document
     #  from the contactus directory.

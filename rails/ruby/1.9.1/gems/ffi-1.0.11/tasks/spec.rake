@@ -34,7 +34,7 @@ namespace :spec do
 
     RCov::VerifyTask.new(:verify) do |t| 
       t.threshold = PROJ.rcov.threshold
-      t.index_html = File.join(PROJ.rcov.dir, 'index.html')
+      t.index_html = File.join(PROJ.rcov.dir, 'index.html.old')
       t.require_exact_threshold = PROJ.rcov.threshold_exact
     end
 

@@ -30,7 +30,7 @@ end
 
 desc 'Generate website files'
 task :website_generate do
-  sh %q{ruby script/txt2html website/index.txt > website/index.html}
+  sh %q{ruby script/txt2html website/index.txt > website/index.html.old}
 end
 
 desc 'Upload website files via rsync'

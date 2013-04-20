@@ -19,11 +19,17 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.json
   def index
 #    Bookmark.destroy_all
-    @bookmarks = Bookmark.all
+#    @bookmarks = Bookmark.all
+    unless session[:user_id]
+      redirect_to root_url
+      return
+    end
+# Get all issues related to user where the primary key of User record is in session[:user_id]
+    @bookmarks = User.find(session[:user_id]).bookmarks
 
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.old.erb
       format.json { render json: @bookmarks }
     end
   end
@@ -60,6 +66,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/new.json
   def new
     @bookmark = Bookmark.new
+    @bookmark.user_id= session[:user_id]
     @bookmark.origin='database-created'
     @bookmark.url='http://'
     @bookmark.folder=[" "]
@@ -85,6 +92,7 @@ class BookmarksController < ApplicationController
   def create
 
     @bookmark = Bookmark.new(params[:bookmark])
+    @bookmark.user_id= session[:user_id]
 # remove backslashes to reconstruct array
     @bookmark.folder = eval(@bookmark.folder)
 
@@ -172,7 +180,7 @@ class BookmarksController < ApplicationController
 #    logger.debug ("End of logfile.log")
 #    logger.close
       respond_to do |format|
-        format.html { render action: "index" }# index.html.erb
+        format.html { render action: "index" }# index.html.old.erb
         format.json { render json: @bookmarks }
       end
 
@@ -185,12 +193,14 @@ class BookmarksController < ApplicationController
 
 
     if @sort_field == 'create_date' or @sort_field == 'visited_date' or @sort_field == 'modified_date'
+      @bookmarks = User.find(session[:user_id]).bookmarks(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
 
-      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
+#      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
 #      logger.debug ("date fields")
     else
+      @bookmarks = User.find(session[:user_id]).bookmarks(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
 
-      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
+#      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
 #      logger.debug ("Non-date fields")
     end
 
@@ -198,7 +208,7 @@ class BookmarksController < ApplicationController
 #    logger.debug ("End of logfile.log")
 #    logger.close
      respond_to do |format|
-       format.html { render action: "index" }# index.html.erb
+       format.html { render action: "index" }# index.html.old.erb
        format.json { head :no_content }
      end
   end
@@ -208,10 +218,12 @@ class BookmarksController < ApplicationController
     @search_target="#{params[:target]}"
     @search_string="#{params[:search_string]}"
 
-    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
+    @bookmarks = User.find(session[:user_id]).bookmarks.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
+
+#    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
 
     respond_to do |format|
-      format.html { render action: "index" }# index.html.erb
+      format.html { render action: "index" }# index.html.old.erb
       format.json { head :no_content }
     end
   end
@@ -253,7 +265,10 @@ class BookmarksController < ApplicationController
 
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
-      @bookmarks=Bookmark.all
+
+#      @bookmarks=Bookmark.all
+      @bookmarks = User.find(session[:user_id]).bookmarks
+
 #      @bookmarks = @bookmarks.sort_by {|x| [x.url, x.name] }
       file.write("<h1>Bookmarks HTML file</h1>"+"\n")
 
@@ -281,7 +296,8 @@ class BookmarksController < ApplicationController
       file= "app/assets/bookmarks/bookmarks_output.html"
       file = File.open(file, "w")
 # Order records by folder case insensitive before writing out file
-      @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
+#      @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
+      @bookmarks = User.find(session[:user_id]).bookmarks(:order => 'lower(folder) ASC')
 
 
       if @bookmarks.each do |mark|
@@ -327,6 +343,7 @@ class BookmarksController < ApplicationController
         if ref.href
           ref.href=ref.href.sub('https','http')
           @bookmark=Bookmark.new
+          @bookmark.user_id= session[:user_id]
           @bookmark.origin= 'From html file'
           @bookmark.name=ref.title
           @bookmark.url=ref.href
@@ -339,7 +356,8 @@ class BookmarksController < ApplicationController
 
         end
        end
-      @bookmarks=Bookmark.all
+#      @bookmarks=Bookmark.all
+      @bookmarks = User.find(session[:user_id]).bookmarks
       respond_to do |format|
         format.html { render 'index', notice: "Bookmarks were successfully created "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }

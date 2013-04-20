@@ -576,7 +576,7 @@ IFNOT:inline_source
 ENDIF:inline_source
     <noframes>
           <body bgcolor="white">
-            Click <a href="html/index.html">here</a> for a non-frames
+            Click <a href="html/index.html.old">here</a> for a non-frames
             version of this page.
           </body>
     </noframes>

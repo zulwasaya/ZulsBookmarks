@@ -5,7 +5,7 @@ class TestRDocMarkupToHtmlCrossref < XrefTestCase
   def setup
     super
 
-    @to = RDoc::Markup::ToHtmlCrossref.new 'index.html', @c1, true
+    @to = RDoc::Markup::ToHtmlCrossref.new 'index.html.old', @c1, true
   end
 
   def test_convert_CROSSREF

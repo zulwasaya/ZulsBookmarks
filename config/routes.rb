@@ -1,5 +1,11 @@
 Zulsearch::Application.routes.draw do
   resources :bookmarks
+  root :to => 'sessions#new'
+#  get   '/login', :to => 'sessions#new', :as => :login
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+  get '/logout', :to => 'sessions#destroy'
+
   match 'check_urls' => 'bookmarks#check_urls'
   match 'sortform' => 'bookmarks#sortform'
   match 'sortbookmarks' => 'bookmarks#sortbookmarks'
@@ -57,7 +63,7 @@ Zulsearch::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  # just remember to delete public/index.html.old.
   # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"

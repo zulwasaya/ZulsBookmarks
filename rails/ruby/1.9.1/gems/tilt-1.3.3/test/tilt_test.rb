@@ -37,7 +37,7 @@ class TiltTest < Test::Unit::TestCase
 
   test "looking up template classes with multiple file extensions" do
     Tilt.register('mock', MockTemplate)
-    impl = Tilt['index.html.mock']
+    impl = Tilt['index.html.old.mock']
     assert_equal MockTemplate, impl
   end
 

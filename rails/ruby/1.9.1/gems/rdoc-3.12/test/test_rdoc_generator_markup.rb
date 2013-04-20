@@ -12,7 +12,7 @@ class TestRDocGeneratorMarkup < RDoc::TestCase
     @rdoc = RDoc::RDoc.new
     @rdoc.options = @options
     @parent = self
-    @path = '/index.html'
+    @path = '/index.html.old'
     @symbols = {}
 
     RDoc::RDoc.current = @rdoc
@@ -23,7 +23,7 @@ class TestRDocGeneratorMarkup < RDoc::TestCase
   end
 
   def test_as_href
-    assert_equal '../index.html', as_href('Foo/Bar.html')
+    assert_equal '../index.html.old', as_href('Foo/Bar.html')
   end
 
   def test_cvs_url

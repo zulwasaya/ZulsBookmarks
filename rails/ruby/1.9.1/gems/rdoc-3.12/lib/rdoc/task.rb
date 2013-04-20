@@ -290,7 +290,7 @@ class RDoc::Task < Rake::TaskLib
   private
 
   def rdoc_target
-    "#{rdoc_dir}/index.html"
+    "#{rdoc_dir}/index.html.old"
   end
 
   def rdoc_task_name

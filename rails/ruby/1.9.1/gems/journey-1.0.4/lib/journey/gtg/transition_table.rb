@@ -74,7 +74,7 @@ module Journey
         viz_dir   = File.join File.dirname(__FILE__), '..', 'visualizer'
         fsm_js    = File.read File.join(viz_dir, 'fsm.js')
         fsm_css   = File.read File.join(viz_dir, 'fsm.css')
-        erb       = File.read File.join(viz_dir, 'index.html.erb')
+        erb       = File.read File.join(viz_dir, 'index.html.old.erb')
         states    = "function tt() { return #{to_json}; }"
 
         fun_routes = paths.shuffle.first(3).map do |ast|

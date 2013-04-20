@@ -54,3 +54,7 @@ gem 'markio'
 # gem 'kauperts_link_checker'
 # ruby gem to check url status
 # gem 'check_http'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-linkedin'

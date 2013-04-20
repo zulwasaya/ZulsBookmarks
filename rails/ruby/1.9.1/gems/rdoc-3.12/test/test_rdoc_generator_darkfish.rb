@@ -70,7 +70,7 @@ class TestRDocGeneratorDarkfish < RDoc::TestCase
 
     @g.generate [top_level]
 
-    assert_file 'index.html'
+    assert_file 'index.html.old'
     assert_file 'Object.html'
     assert_file 'table_of_contents.html'
     assert_file 'js/search_index.js'
@@ -82,11 +82,11 @@ class TestRDocGeneratorDarkfish < RDoc::TestCase
                end
 
     assert_match(/<meta content="text\/html; charset=#{encoding}"/,
-                 File.read('index.html'))
+                 File.read('index.html.old'))
     assert_match(/<meta content="text\/html; charset=#{encoding}"/,
                  File.read('Object.html'))
 
-    refute_match(/Ignored/, File.read('index.html'))
+    refute_match(/Ignored/, File.read('index.html.old'))
   end
 
   def test_generate_dry_run
@@ -96,7 +96,7 @@ class TestRDocGeneratorDarkfish < RDoc::TestCase
 
     @g.generate [top_level]
 
-    refute_file 'index.html'
+    refute_file 'index.html.old'
     refute_file 'Object.html'
   end
 

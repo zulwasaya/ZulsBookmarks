@@ -1,4 +1,10 @@
-<h1>Listing bookmarks database </h1>
+<h1><%=if $name
+         $name.capitalize
+       end
+%> bookmarks database </h1>
+
+<h3>Logged in through <%=if $provider
+                           $provider.capitalize end %></h3>
 <% if @search_string and @search_target then %>
     <h1>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </h1>
    <% end %>

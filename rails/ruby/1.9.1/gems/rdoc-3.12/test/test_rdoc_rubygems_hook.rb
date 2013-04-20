@@ -117,7 +117,7 @@ class TestRDocRubygemsHook < Gem::TestCase
 
     @rdoc.generate
 
-    assert_path_exists File.join(@a.doc_dir('rdoc'), 'index.html')
+    assert_path_exists File.join(@a.doc_dir('rdoc'), 'index.html.old')
     assert_path_exists File.join(@a.doc_dir('ri'),   'cache.ri')
   end
 
@@ -128,7 +128,7 @@ class TestRDocRubygemsHook < Gem::TestCase
 
     @rdoc.generate
 
-    refute_path_exists File.join(@a.doc_dir('rdoc'), 'index.html')
+    refute_path_exists File.join(@a.doc_dir('rdoc'), 'index.html.old')
     refute_path_exists File.join(@a.doc_dir('ri'),   'cache.ri')
   end
 

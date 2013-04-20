@@ -250,7 +250,7 @@ class RDoc::Generator::Darkfish
 
     debug_msg "Rendering the index page..."
 
-    out_file = @base_dir + @options.op_dir + 'index.html'
+    out_file = @base_dir + @options.op_dir + 'index.html.old'
     # suppress 1.9.3 warning
     rel_prefix = rel_prefix = @outputdir.relative_path_from(out_file.dirname)
     @title = @options.title
@@ -258,7 +258,7 @@ class RDoc::Generator::Darkfish
     render_template template_file, out_file do |io| binding end
   rescue => e
     error = RDoc::Error.new \
-      "error generating index.html: #{e.message} (#{e.class})"
+      "error generating index.html.old: #{e.message} (#{e.class})"
     error.set_backtrace e.backtrace
 
     raise error

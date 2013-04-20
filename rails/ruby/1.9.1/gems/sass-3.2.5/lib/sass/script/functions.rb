@@ -701,7 +701,7 @@ module Sass::Script
     #     or `number` isn't a number between 0% and 100%
     def saturate(color, amount = nil)
       # Support the filter effects definition of saturate.
-      # https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
+      # https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html.old
       return Sass::Script::String.new("saturate(#{color})") if amount.nil?
       _adjust(color, amount, :saturation, 0..100, :+, "%")
     end

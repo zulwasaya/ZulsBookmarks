@@ -156,7 +156,7 @@ module Hike
 
       # Returns a `Regexp` that matches the allowed extensions.
       #
-      #     pattern_for("index.html") #=> /^index(.html|.htm)(.builder|.erb)*$/
+      #     pattern_for("index.html.old") #=> /^index(.html|.htm)(.builder|.erb)*$/
       def build_pattern_for(basename)
         extname = basename.extname
         aliases = find_aliases_for(extname)

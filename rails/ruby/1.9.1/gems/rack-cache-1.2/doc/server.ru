@@ -5,7 +5,7 @@
 class Rewriter < Struct.new(:app)
   def call(env)
     if env['PATH_INFO'] =~ /\/$/
-      env['PATH_INFO'] += 'index.html'
+      env['PATH_INFO'] += 'index.html.old'
     elsif env['PATH_INFO'] !~ /\.\w+$/
       env['PATH_INFO'] += '.html'
     end
