@@ -24,8 +24,8 @@ class BookmarksController < ApplicationController
       redirect_to root_url
       return
     end
-# Get all issues related to user where the primary key of User record is in session[:user_id]
-    @bookmarks = User.find(session[:user_id]).bookmarks
+# Get all bookmarks related to user where the primary key of User record is in session[:user_id]
+    @bookmarks =User.find(session[:user_id]).bookmarks
 
 
     respond_to do |format|
@@ -151,8 +151,11 @@ class BookmarksController < ApplicationController
   end
 
   def destroy_all
+    @bookmarks =User.find(session[:user_id]).bookmarks
 
-    Bookmark.destroy_all
+#    Bookmark.destroy_all
+    @bookmarks.destroy_all
+
 #    folderArray=['ruby']
 #    bookmarks= Bookmark.create([{origin: 'ruby on rails',name: 'Ruby on Rails',url: 'http://rubyonrails.org',
 #        folder: folderArray,create_date: DateTime.now,visited_date: DateTime.now,modified_date: DateTime.now}])
@@ -164,7 +167,9 @@ class BookmarksController < ApplicationController
   end
 
   def check_urls
-    @bookmarks = Bookmark.all
+    @bookmarks =User.find(session[:user_id]).bookmarks
+#    @bookmarks = Bookmark.all
+
 #    logger = Logger.new('log/logfile.log')
 #    logger.debug ("Log file logfile.log created")
     @bookmarks.each do |href|
@@ -252,7 +257,8 @@ class BookmarksController < ApplicationController
                                format.json { render json: @bookmark.errors, status: :unprocessable_entity }
                              end
                      end
-      @bookmarks=Bookmark.all
+   #   @bookmarks=Bookmark.all
+      @bookmarks =User.find(session[:user_id]).bookmarks
 
     end
 
