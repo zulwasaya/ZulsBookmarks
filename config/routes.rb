@@ -1,4 +1,4 @@
-Zulsearch::Application.routes.draw do
+ZulsBookmarks::Application.routes.draw do
   resources :bookmarks
   root :to => 'sessions#new'
 #  get   '/login', :to => 'sessions#new', :as => :login

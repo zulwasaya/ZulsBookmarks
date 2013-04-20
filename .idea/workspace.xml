@@ -2,75 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130407005119_create_authorizations.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130407005655_create_users.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/authorization.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sessions/new.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130107175122_create_bookmarks.rb" afterPath="$PROJECT_DIR$/db/migrate/20130107175122_create_bookmarks.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/polyglot-0.3.3/Rakefile" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/polyglot-0.3.3/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-cache-1.2/Rakefile" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-cache-1.2/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_controller/base.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_controller/base.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/bookmark.rb" afterPath="$PROJECT_DIR$/app/models/bookmark.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bookmarks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bookmarks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/scaffold_controller/templates/controller.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/scaffold_controller/templates/controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/lib/rdoc/generator/darkfish.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/lib/rdoc/generator/darkfish.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/ethon-0.5.0/lib/ethon/easy.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/ethon-0.5.0/lib/ethon/easy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/helpers/form_tag_helper.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/helpers/form_tag_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-3.2.5/lib/sass/script/functions.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-3.2.5/lib/sass/script/functions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/hike-1.2.1/lib/hike/index.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/hike-1.2.1/lib/hike/index.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rake-10.0.3/doc/jamis.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rake-10.0.3/doc/jamis.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/journey-1.0.4/journey.gemspec" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/journey-1.0.4/journey.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/json-1.7.6/json.gemspec" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/json-1.7.6/json.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/json-1.7.6/json_pure.gemspec" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/json-1.7.6/json_pure.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/renderer/partial_renderer.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/renderer/partial_renderer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/plugin_new/plugin_new_generator.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/plugin_new/plugin_new_generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/guides/code/getting_started/app/controllers/posts_controller.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/guides/code/getting_started/app/controllers/posts_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/omniauth.rb" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/guides/code/getting_started/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/guides/code/getting_started/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/app/templates/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/railties-3.2.9/lib/rails/generators/rails/app/templates/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.5/test/fixtures/sass_project/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.5/test/fixtures/sass_project/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.5/test/fixtures/scss_project/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.5/test/fixtures/scss_project/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/alternate_config_project/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/alternate_config_project/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/sass_project/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/sass_project/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/scss_project/config/routes.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/sass-rails-3.2.6/test/fixtures/scss_project/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-cache-1.2/doc/server.ru" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-cache-1.2/doc/server.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/ffi-1.0.11/tasks/spec.rake" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/ffi-1.0.11/tasks/spec.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-1.4.4/test/spec_static.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-1.4.4/test/spec_static.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-1.4.4/lib/rack/static.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rack-1.4.4/lib/rack/static.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/lib/rdoc/task.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/lib/rdoc/task.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_generator_darkfish.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_generator_darkfish.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_generator_markup.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_generator_markup.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_markup_to_html_crossref.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_markup_to_html_crossref.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_rubygems_hook.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/rdoc-3.12/test/test_rdoc_rubygems_hook.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/tilt-1.3.3/test/tilt_test.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/tilt-1.3.3/test/tilt_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/core_ext/integer/time.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/core_ext/integer/time.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/core_ext/numeric/time.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/activesupport-3.2.9/lib/active_support/core_ext/numeric/time.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/journey-1.0.4/lib/journey/gtg/transition_table.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/journey-1.0.4/lib/journey/gtg/transition_table.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/helpers/translation_helper.rb" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/actionpack-3.2.9/lib/action_view/helpers/translation_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/treetop-1.4.12/treetop.gemspec" afterPath="$PROJECT_DIR$/rails/ruby/1.9.1/gems/treetop-1.4.12/treetop.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zulsearch.iml" afterPath="$PROJECT_DIR$/.idea/zulsearch.iml" />
-      <change type="MOVED" beforePath="E:\RUBYMINE\CURRENT-PROJECTS\Zulsearch\zulsearch\public\index.html" afterPath="$PROJECT_DIR$/public/index.html.old" />
     </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366429855278" ignored="false" />
+    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366438086891" ignored="false" />
     <file path="/Gemfile" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1365142992443" ignored="false" />
     <file path="/bookmarks_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366427065852" ignored="false" />
     <file path="/sessions_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366427421565" ignored="false" />
     <file path="/user.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366427661170" ignored="false" />
     <file path="/seeds.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366429129219" ignored="false" />
     <file path="/bookmark.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366428913255" ignored="false" />
+    <file path="/secret_token.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366437234298" ignored="false" />
+    <file path="/temp.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366437854471" ignored="false" />
+    <file path="/session_store.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366438040385" ignored="false" />
+    <file path="/application.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366438377845" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,37 +53,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20130107175122_create_bookmarks.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130107175122_create_bookmarks.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130407005119_create_authorizations.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130407005119_create_authorizations.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20130407005655_create_users.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130407005655_create_users.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bookmark.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/bookmark.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.6181818">
               <folding />
             </state>
           </provider>
@@ -139,8 +89,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -148,17 +98,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/sessions/new.erb">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -166,8 +107,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -175,8 +116,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130121185228_rename_search_to_origin.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130121185228_rename_search_to_origin.rb">
+      <file leaf-file-name="bookmarks_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/bookmarks_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -206,10 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/bookmarks/_formsearch.html.erb" />
-        <option value="$PROJECT_DIR$/log/logfile.log" />
-        <option value="$PROJECT_DIR$/db/migrate/20130119035136_add_details_to_bookmarks.rb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/_formedit.html.erb" />
@@ -222,6 +177,10 @@
         <option value="$PROJECT_DIR$/db/migrate/20130107175122_create_bookmarks.rb" />
         <option value="$PROJECT_DIR$/app/models/bookmark.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/secret_token.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/session_store.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -233,8 +192,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="11" />
+    <option name="x" value="97" />
+    <option name="y" value="471" />
     <option name="width" value="1331" />
     <option name="height" value="784" />
   </component>
@@ -264,16 +223,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,7 +237,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,81 +247,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -386,7 +261,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="zulsbookmarks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="zulsearch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -404,7 +297,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="zulsbookmarks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="zulsearch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -415,10 +326,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -426,7 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -448,7 +355,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -470,7 +377,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -488,7 +395,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -502,7 +409,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -520,7 +427,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -538,7 +445,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
+              <option name="myItemId" value="zulsbookmarks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -562,20 +469,30 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zulsearch" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IssueTracker/IssueTracker" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -803,6 +720,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -832,13 +756,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -949,15 +866,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: zulsearch" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: zulsearch" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Ruby.bookmarks_controller" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:drop" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.db:seed" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.bookmarks_controller" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.db:drop" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:seed" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Production: zulsearch" />
+      <item index="8" class="java.lang.String" itemvalue="Rails.Development: zulsearch" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -1016,25 +933,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="11" width="1331" height="784" extended-state="0" />
+    <frame x="97" y="471" width="1331" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31538463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.25902668" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30575258" sideWeight="0.7037037" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.7046154" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.38147566" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2962963" sideWeight="0.9992057" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29538462" sideWeight="0.9992057" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31538463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.6593407" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1102,28 +1019,49 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_formedit.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/secret_token.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/session_store.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/wrap_parameters.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/searchform.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/sortform.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1132,63 +1070,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130119035136_add_details_to_bookmarks.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130121185228_rename_search_to_origin.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/bookmarks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130107175122_create_bookmarks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130407005119_create_authorizations.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130407005655_create_users.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bookmark.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1200,16 +1110,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/bookmark.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.6181818">
           <folding />
         </state>
       </provider>

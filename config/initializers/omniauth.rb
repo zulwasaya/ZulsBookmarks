@@ -7,7 +7,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
  provider :facebook, '124983381024311', 'e57a6104170398577ca286e257fdef74'
 
   # ==> GitHub
- provider :github, '5062384718cbecfcc858', '6e0961934566019ed7d84a9058b980e8a3f75df2'
+ provider :github, '11c75b100e99f0118ef4', '7fa145f31d689318596411b775457427b99cdb32'
 
   # ==> LinkedIn
  provider :linked_in, 'n9df58a1hsud', 'EiTKeQysAcA1sGLF'
