@@ -4,7 +4,7 @@ ZulsBookmarks::Application.routes.draw do
 #  get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
-  get '/logout', :to => 'sessions#destroy'
+#  get '/logout', :to => 'sessions#destroy'
 
   match 'check_urls' => 'bookmarks#check_urls'
   match 'sortform' => 'bookmarks#sortform'
