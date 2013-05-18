@@ -1,9 +1,11 @@
+<div data-role="header">
+  <h2>Zul's Bookmarks Login</h2>
+  <!-- end .header --></div>
+<%= image_tag "DigiserveLogo5.png", :width => "65%", :style => 'display: block; margin-left: auto; margin-right: auto;' %>
 
-<div class="container">
-  <div class="header"><a href="#"><img src="assets/DigiserveLogo5.png" width="360" height="121" alt="Logo" /></a>
-    <!-- end .header --></div>
-  <div class="content">
-    <h1>Zul's Bookmarks Login</h1>
+<div data-role="content" >
+
+
     <p> To login click any one of the following links to authorize app.
       </br>
       Each authorization will result in a separate copy of database resulting in upto four different
@@ -11,21 +13,11 @@
       </br>
       </br>
     </p>
-    <p> <a href="/auth/facebook">Connect With Facebook</a></br>
-      </br>
-      </br>
-      <a href="/auth/twitter">Connect With Twitter</a></br>
-      </br>
-      </br>
-      <a href="/auth/linkedin">Connect With Linkedin</a></br>
-      </br>
-      </br>
-      <a href="/auth/github">Connect With Github</a></br>
-      </br>
-    </p>
+  <p> <a rel="external" data-ajax ="false" href="/auth/facebook">Connect With Facebook</a></p>
+  <p> <a rel="external" data-ajax ="false" href="/auth/twitter">Connect With Twitter</a></p>
+  <p> <a rel="external" data-ajax ="false" href="/auth/linkedin">Connect With Linkedin</a></p>
+  <p> <a rel="external" data-ajax ="false" href="/auth/github">Connect With Github</a></p>
+
+
 
     <!-- end .content --></div>
-  <div class="footer">
-    <p>Digiserve Copyright 2013</p>
-    <!-- end .footer --></div>
-  <!-- end .container --></div>
