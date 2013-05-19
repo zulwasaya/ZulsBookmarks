@@ -10,9 +10,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<%= image_tag "DigiserveLogo5.png", :width => "65%", :style => 'display: block; margin-left: auto; margin-right: auto;' %>
+
 <body>
 <div data-role="page" id="page">
+  <%= image_tag "DigiserveLogo5.png", :width => "65%", :style => 'display: block; margin-left: auto; margin-right: auto;' %>
 
 <%= yield %>
   <div data-role="footer">

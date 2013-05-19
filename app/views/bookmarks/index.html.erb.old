@@ -1,0 +1,52 @@
+<h1><%=if $name
+         $name.capitalize
+       end
+%> bookmarks database </h1>
+
+<h3>Logged in through <%=if $provider
+                           $provider.capitalize end %></h3>
+<% if @search_string and @search_target then %>
+    <h1>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </h1>
+   <% end %>
+<% if @sort_field and @sort_order then %>
+    <h1>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </h1>
+<% end %>
+
+
+<table>
+  <tr>
+    <th>SHOW</th>
+    <th>EDIT</th>
+    <th>DESTROY</th>
+    <th>NAME/URL</th>
+
+
+  </tr>
+                                                                                                                        <br />
+
+  <%= link_to 'Search Bookmarks', searchform_path %>
+  <br />
+  <%= link_to 'Sort Bookmarks', sortform_path %>
+  <br />
+  <%= link_to 'Create New Bookmark ', new_bookmark_path %>                                                          <br />
+  <%= link_to 'Check and validate all Bookmarks via internet', check_urls_path %>                                      <br />
+  <%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %>                                            <br />
+  <%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %>                                             <br />
+  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path, data: { confirm: 'Are you sure?' } %>                                              <br />
+                                                                                                                        <br />
+  <%= link_to 'Back to list all Bookmarks', bookmarks_path %>                                                           <br />
+                                                                                                                        <br/>
+  <% @bookmarks.each do |bookmark| %>
+  <tr>
+    <td><%= link_to 'Show', bookmark %></td>
+    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+    <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%='Origin='%> <%= bookmark.origin%> <br /> <%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
+        <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br />></td>
+
+  </tr>
+<% end %>
+</table>
+
+
+
