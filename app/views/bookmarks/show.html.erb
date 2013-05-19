@@ -1,3 +1,22 @@
+
+
+<div data-role="header">
+
+
+  <h1><%=if $name
+           $name.capitalize
+         end
+  %> Show Bookmark</h1>
+  <%= link_to 'Back', bookmarks_path, {"data-icon" =>"back", "class" => "ui-btn-left"} %>
+  <%= link_to  'Edit', edit_bookmark_path(@bookmark), {"data-icon" =>"star", "class" => "ui-btn-right"} %>
+
+  <!-- end .header --></div>
+
+<div data-role="content">
+  <ul data-role="listview"  data-inset="true" data-theme="a">
+
+
+
 <p id="notice"><%= notice %></p>
 
 
@@ -37,4 +56,8 @@
 
 
 <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
-<%= link_to 'Back to Listing bookmarks ', bookmarks_path %>
+
+
+
+  </ul>
+  <!-- end .content --></div>

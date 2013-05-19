@@ -1,6 +1,26 @@
-<h1>Sort bookmarks field in ascending or descending order </h1>
+<div data-role="header">
+
+
+  <h1><%=if $name
+           $name.capitalize
+         end
+  %> Sort Bookmarks field </h1>
+
+  <%= link_to 'Back', bookmarks_path, {"data-icon" =>"back", "class" => "ui-btn-left"} %>
+  <!-- end .header --></div>
+
+<div data-role="content">
+  <ul data-role="listview"  data-inset="true" data-theme="a">
+
+
+
+
 
 <%= render 'formsort' %>
 
 
-<%= link_to 'Back to Listing bookmarks ', bookmarks_path %>
+
+
+
+  </ul>
+  <!-- end .content --></div>
