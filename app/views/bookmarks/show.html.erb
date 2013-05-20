@@ -12,7 +12,7 @@
 
   <!-- end .header --></div>
 
-<div data-role="content">
+<div data-role="content" data-theme="b" data-transition= "flip">
   <ul data-role="listview"  data-inset="true" data-theme="a">
 
 
@@ -53,10 +53,6 @@
   <b>Url:</b>
   <a href=<%= @bookmark.url%> > <%=@bookmark.url%> </a>
 </p>
-
-
-<%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |
-
 
 
   </ul>

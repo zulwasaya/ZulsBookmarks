@@ -1,7 +1,8 @@
 
 <div class="form_search">
   <%= form_tag({:action => :searchbookmarks} ,:method=>"get") do %>
-      <%= label_tag(:target, "Search Field:") %>
+      <%= label_tag(:target, "Search By:") %>
+
       <% ['origin', 'folder', 'url', 'name' ].each do |target| %>
           <%= radio_button_tag 'target', target, @target == target,:checked => 'checked' %>
       <%= target.humanize %>

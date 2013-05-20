@@ -29,7 +29,7 @@ class BookmarksController < ApplicationController
 
 
     respond_to do |format|
-      format.html # index.html.old.erb
+      format.html # index.html.erb
       format.json { render json: @bookmarks }
     end
   end
@@ -185,7 +185,7 @@ class BookmarksController < ApplicationController
 #    logger.debug ("End of logfile.log")
 #    logger.close
       respond_to do |format|
-        format.html { render action: "index" }# index.html.old.erb
+        format.html { render action: "index" }# index.html.erb
         format.json { render json: @bookmarks }
       end
 
@@ -213,7 +213,7 @@ class BookmarksController < ApplicationController
 #    logger.debug ("End of logfile.log")
 #    logger.close
      respond_to do |format|
-       format.html { render action: "index" }# index.html.old.erb
+       format.html { render action: "index" }# index.html.erb
        format.json { head :no_content }
      end
   end
@@ -228,7 +228,7 @@ class BookmarksController < ApplicationController
 #    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
 
     respond_to do |format|
-      format.html { render action: "index" }# index.html.old.erb
+      format.html { render action: "index" }# index.html.erb
       format.json { head :no_content }
     end
   end

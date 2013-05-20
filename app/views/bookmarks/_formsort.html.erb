@@ -1,7 +1,7 @@
 
 <div class="form_sort">
   <%= form_tag({:action => :sortbookmarks} ,:method=>"get") do %>
-      <%= label_tag(:sort, "Sort Field:") %>
+      <%= label_tag(:sort, "Sort By:") %>
       <% ['origin', 'folder', 'url','create_date','visited_date','modified_date','name' ].each do |sort| %>
           <%= radio_button_tag 'sort', sort, @sort == sort,:checked => 'checked' %>
       <%= sort.humanize %>

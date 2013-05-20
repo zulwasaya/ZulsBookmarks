@@ -1,52 +1,60 @@
+</head>
+<div data-role="header">
+
 <h1><%=if $name
          $name.capitalize
        end
-%> bookmarks database </h1>
+%> Bookmarks database </h1>
 
 <h3>Logged in through <%=if $provider
                            $provider.capitalize end %></h3>
+
+
 <% if @search_string and @search_target then %>
     <h1>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </h1>
    <% end %>
 <% if @sort_field and @sort_order then %>
     <h1>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </h1>
 <% end %>
+<!-- end .header --></div>
+
+<div data-role="content" data-theme="b" data-transition= "flip">
+  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
 
 
-<table>
-  <tr>
-    <th>SHOW</th>
-    <th>EDIT</th>
-    <th>DESTROY</th>
-    <th>NAME/URL</th>
+
+  <li>
+  <p><%= link_to 'Search Bookmarks', searchform_path %> </p>
+  <p><%= link_to 'Sort Bookmarks', sortform_path %> </p>
+  <p><%= link_to 'Create New Bookmark ', new_bookmark_path %> </p>
+  <p><%= link_to 'Check and validate all Bookmarks via internet', check_urls_path %> </p>
+  <p><%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %> </p>
+  <p><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </p>
+  <p><%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p>                                             <br />
 
 
-  </tr>
-                                                                                                                        <br />
+  <p><%= link_to 'Back to list all Bookmarks', bookmarks_path %> </p>
 
-  <%= link_to 'Search Bookmarks', searchform_path %>
-  <br />
-  <%= link_to 'Sort Bookmarks', sortform_path %>
-  <br />
-  <%= link_to 'Create New Bookmark ', new_bookmark_path %>                                                          <br />
-  <%= link_to 'Check and validate all Bookmarks via internet', check_urls_path %>                                      <br />
-  <%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %>                                            <br />
-  <%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %>                                             <br />
-  <%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path, data: { confirm: 'Are you sure?' } %>                                              <br />
-                                                                                                                        <br />
-  <%= link_to 'Back to list all Bookmarks', bookmarks_path %>                                                           <br />
+   </li>
                                                                                                                         <br/>
   <% @bookmarks.each do |bookmark| %>
-  <tr>
-    <td><%= link_to 'Show', bookmark %></td>
-    <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
-    <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%='Origin='%> <%= bookmark.origin%> <br /> <%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
-        <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br />></td>
+  <li>
 
-  </tr>
+
+    <p><%= link_to 'Show', bookmark %></p>
+    <p><%= link_to 'Edit', edit_bookmark_path(bookmark) %></p>
+    <p><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+
+    <p><%='Origin='%> <%= bookmark.origin%> <br /> <%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
+        <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br /></p>
+
+
+
 <% end %>
-</table>
+    </li>
+  </ul>
 
+  <!-- end .content --></div>
 
 

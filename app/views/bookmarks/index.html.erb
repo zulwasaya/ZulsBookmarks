@@ -4,21 +4,21 @@
 <h1><%=if $name
          $name.capitalize
        end
-%> Bookmarks database </h1>
+%> Bookmarks </h1>
 
-<h3>Logged in through <%=if $provider
-                           $provider.capitalize end %></h3>
+<p>Logged in through <%=if $provider
+                           $provider.capitalize end %></p>
 
 
 <% if @search_string and @search_target then %>
-    <h1>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </h1>
+    <p>  <%= "Search results of searching field:#{@search_target} with string:#{@search_string}" %> </p>
    <% end %>
 <% if @sort_field and @sort_order then %>
-    <h1>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </h1>
+    <p>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </p>
 <% end %>
 <!-- end .header --></div>
 
-<div data-role="content">
+<div data-role="content" data-theme="b" data-transition= "flip">
   <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
 
 
@@ -40,12 +40,18 @@
   <% @bookmarks.each do |bookmark| %>
   <li>
 
+    <div data-role="button" data-inline="true" data-theme='c'>
+    <%= link_to 'Show', bookmark %>
+    </div>
+    <div data-role="button" data-inline="true" data-theme='c'>
+    <%= link_to 'Edit', edit_bookmark_path(bookmark) %>
+    </div>
+    <div data-role="button" data-inline="true" data-theme='c'>
+    <%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
 
-    <p><%= link_to 'Show', bookmark %></p>
-    <p><%= link_to 'Edit', edit_bookmark_path(bookmark) %></p>
-    <p><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <p><%='Origin='%> <%= bookmark.origin%> <br /> <%='Folders='%> <%= bookmark.folder{|f|  f} %><br />
-        <%='Name='+ bookmark.name %> <br /> <a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br />></p>
+
+    <h2><a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br /></h2>
 
 
 
