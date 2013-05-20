@@ -3,10 +3,8 @@
 <div data-role="header">
 
 
-  <h1><%=if $name
-           $name.capitalize
-         end
-  %> Show Bookmark</h1>
+
+  <h4> Show Bookmark</h4>
   <%= link_to 'Back', bookmarks_path, {"data-icon" =>"back", "class" => "ui-btn-left"} %>
   <%= link_to  'Edit', edit_bookmark_path(@bookmark), {"data-icon" =>"star", "class" => "ui-btn-right"} %>
 
@@ -25,12 +23,12 @@
   <%= @bookmark.name %>
 </p>
 <p>
-  <b>Folders:</b>
+  <b>File Folder:</b>
   <%= @bookmark.folder %>
 </p>
 
 <p>
-  <b>Original Source:</b>
+  <b>Origin Folder:</b>
   <%= @bookmark.origin %>
 </p>
 

@@ -38,6 +38,9 @@ class BookmarksController < ApplicationController
   # GET /bookmarks/1.json
   def show
     @bookmark = Bookmark.find(params[:id])
+# Update visited date
+    @bookmark.visited_date=Time.now
+    @bookmark.update_attributes(params[:bookmark])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -94,7 +97,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(params[:bookmark])
     @bookmark.user_id= session[:user_id]
 # remove backslashes to reconstruct array
-    @bookmark.folder = eval(@bookmark.folder)
+#    @bookmark.folder = eval(@bookmark.folder)
 
     respond_to do |format|
       if @bookmark.save
@@ -117,6 +120,8 @@ class BookmarksController < ApplicationController
 #    @bookmark.folder.each {|f| f=eval(f)}
 
     @bookmark.modified_date=Time.now
+# remove backslashes to reconstruct array
+#    @bookmark.folder = eval(@bookmark.folder)
     respond_to do |format|
       if @bookmark.update_attributes(params[:bookmark])
         format.html { redirect_to @bookmark, notice: 'Bookmark was successfully updated.' }

@@ -1,10 +1,10 @@
 </head>
 <div data-role="header">
 
-<h1><%=if $name
+<p><%=if $name
          $name.capitalize
        end
-%> Bookmarks </h1>
+%> Bookmarks </p>
 
 <p>Logged in through <%=if $provider
                            $provider.capitalize end %></p>
@@ -24,16 +24,34 @@
 
 
   <li>
-  <p><%= link_to 'Search Bookmarks', searchform_path %> </p>
-  <p><%= link_to 'Sort Bookmarks', sortform_path %> </p>
-  <p><%= link_to 'Create New Bookmark ', new_bookmark_path %> </p>
-  <p><%= link_to 'Check and validate all Bookmarks via internet', check_urls_path %> </p>
-  <p><%= link_to 'Create Bookmarks from HTML file ', from_html_file_path %> </p>
+  <div data-role="button" data-inline="true" data-theme='c'>
+  <p><%= link_to 'Search', searchform_path %> </p>
+  </div>
+  <div data-role="button" data-inline="true" data-theme='c'>
+  <p><%= link_to 'Sort', sortform_path %> </p>
+  </div>
+  <div data-role="button" data-inline="true" data-theme='c'>
+  <p><%= link_to 'Create', new_bookmark_path %> </p>
+  </div>
+  <div data-role="button" data-inline="false" data-theme='c'>
+  <p><%= link_to 'List All', bookmarks_path %> </p>
+  </div>
+  <div data-role="button" data-inline="true" data-theme='c'>
+  <p><%= link_to 'Validate All', check_urls_path %> </p>
+  </div>
+
+  <div data-role="button" data-inline="true" data-theme='e'>
+  <p><%= link_to 'Destroy All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p> <br />
+  </div>
+
+
+
+  <div data-role="button" data-inline="false" data-theme='c'>
+  <p><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </p>
+  </div>
+  <div data-role="button" data-inline="false" data-theme='c'>
   <p><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </p>
-  <p><%= link_to 'Destroy all Bookmarks from database  ', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p>                                             <br />
-
-
-  <p><%= link_to 'Back to list all Bookmarks', bookmarks_path %> </p>
+  </div>
 
    </li>
                                                                                                                         <br/>

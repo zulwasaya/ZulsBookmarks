@@ -1,10 +1,8 @@
 <div data-role="header">
 
 
-  <h1><%=if $name
-           $name.capitalize
-         end
-  %> Edit Bookmark</h1>
+
+  <h4> Edit Bookmark</h4>
 
   <%= link_to 'Back', bookmarks_path, {"data-icon" =>"back", "class" => "ui-btn-left"} %>
   <%= link_to 'Show', @bookmark, {"data-icon" =>"star", "class" => "ui-btn-right"} %>
