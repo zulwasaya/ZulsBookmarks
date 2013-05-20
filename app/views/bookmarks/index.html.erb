@@ -41,7 +41,7 @@
   </div>
 
   <div data-role="button" data-inline="true" data-theme='e'>
-  <p><%= link_to 'Destroy All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p> <br />
+  <p><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p> <br />
   </div>
 
 
@@ -65,7 +65,7 @@
     <%= link_to 'Edit', edit_bookmark_path(bookmark) %>
     </div>
     <div data-role="button" data-inline="true" data-theme='c'>
-    <%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
 
 
