@@ -16,6 +16,7 @@
 <% if @sort_field and @sort_order then %>
     <p>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </p>
 <% end %>
+  <%= link_to 'Logout', logout_path, {"data-icon" =>"back", "class" => "ui-btn-right"} %>
 <!-- end .header --></div>
 
 <div data-role="content" data-theme="b" data-transition= "flip">
