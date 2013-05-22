@@ -20,63 +20,69 @@
 <!-- end .header --></div>
 
 <div data-role="content" data-theme="b" data-transition= "flip">
-  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
+
+ <nav data-role="navbar" data-inset="false" >
+
+  <ul>
+
+
+  <li><%= link_to 'Search', searchform_path %> </li>
+
+  <li><%= link_to 'Sort', sortform_path %> </li>
+
+  <li><%= link_to 'Create', new_bookmark_path %> </li>
+
+
+  <li><%= link_to 'List All', bookmarks_path %> </li>
+
+  <li><%= link_to 'Validate All', check_urls_path %> </li>
 
 
 
-  <li>
-  <div data-role="button" data-inline="true" data-theme='c'>
-  <p><%= link_to 'Search', searchform_path %> </p>
-  </div>
-  <div data-role="button" data-inline="true" data-theme='c'>
-  <p><%= link_to 'Sort', sortform_path %> </p>
-  </div>
-  <div data-role="button" data-inline="true" data-theme='c'>
-  <p><%= link_to 'Create', new_bookmark_path %> </p>
-  </div>
-  <div data-role="button" data-inline="false" data-theme='c'>
-  <p><%= link_to 'List All', bookmarks_path %> </p>
-  </div>
-  <div data-role="button" data-inline="true" data-theme='c'>
-  <p><%= link_to 'Validate All', check_urls_path %> </p>
-  </div>
+  <li><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </li>
+  </ul>
 
-  <div data-role="button" data-inline="true" data-theme='e'>
-  <p><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </p> <br />
-  </div>
+ <ul>
+
+  <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </li>
+
+  <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </li>
+
+</ul>
+
+</nav>
 
 
-
-  <div data-role="button" data-inline="false" data-theme='c'>
-  <p><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </p>
-  </div>
-  <div data-role="button" data-inline="false" data-theme='c'>
-  <p><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </p>
-  </div>
-
-   </li>
+<div>
                                                                                                                         <br/>
   <% @bookmarks.each do |bookmark| %>
-  <li>
-
-    <div data-role="button" data-inline="true" data-theme='c'>
-    <%= link_to 'Show', bookmark %>
-    </div>
-    <div data-role="button" data-inline="true" data-theme='c'>
-    <%= link_to 'Edit', edit_bookmark_path(bookmark) %>
-    </div>
-    <div data-role="button" data-inline="true" data-theme='c'>
-    <%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
 
 
-    <h2><a href=<%= bookmark.url%> > <%=bookmark.url%> </a> <br /></h2>
+
+<nav data-role="navbar" data-inset="true" >
+ <ul>
+    <li><%= link_to 'Show', bookmark %> </li>
+
+    <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
 
 
+    <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+
+ </ul>
+
+ </nav>
+
+   <ul data-role="listview" data-inset="true" data-theme="e">
+    <li><a href=<%= bookmark.url%> > <%=bookmark.url%> </a> </li>
+   </ul>
+
+
+  </ul>
 
 <% end %>
-    </li>
-  </ul>
+  </div>
+
 
   <!-- end .content --></div>
 
