@@ -21,6 +21,7 @@
 
 <div data-role="content" data-theme="b" data-transition= "flip">
 
+
  <nav data-role="navbar" data-inset="false" >
 
   <ul>
@@ -53,35 +54,28 @@
 </nav>
 
 
-<div>
                                                                                                                         <br/>
   <% @bookmarks.each do |bookmark| %>
 
 
-
-<nav data-role="navbar" data-inset="true" >
- <ul>
-    <li><%= link_to 'Show', bookmark %> </li>
-
-    <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
-
-
-    <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-
-
- </ul>
-
- </nav>
-
+  <div>
    <ul data-role="listview" data-inset="true" data-theme="e">
     <li><a href=<%= bookmark.url%> > <%=bookmark.url%> </a> </li>
-   </ul>
+     <div data-role="navbar"  data-inset="true">
+       <ul>
+     <li><%= link_to 'Show', bookmark %> </li>
+     <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
+     <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+       </ul>
+     </div>
 
+   </ul>
+   </div>
 
   </ul>
 
 <% end %>
-  </div>
+
 
 
   <!-- end .content --></div>
