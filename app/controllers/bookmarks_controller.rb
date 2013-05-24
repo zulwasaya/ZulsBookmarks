@@ -231,7 +231,7 @@ class BookmarksController < ApplicationController
 #    logger.debug ("End of logfile.log")
 #    logger.close
      respond_to do |format|
-       format.html { render action: "index" }# index.html.erb
+       format.html { render "index" }# index.html.erb
        format.json { head :no_content }
      end
   end
@@ -246,7 +246,7 @@ class BookmarksController < ApplicationController
 #    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
 
     respond_to do |format|
-      format.html { render action: "index" }# index.html.erb
+      format.html { render "index" }# index.html.erb
       format.json { head :no_content }
     end
   end

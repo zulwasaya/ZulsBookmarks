@@ -2,19 +2,19 @@
 <div class="form_sort">
   <%= form_tag({:action => :sortbookmarks} ,:method=>"get") do %>
       <%= label_tag(:sort, "Sort By:") %>
-      <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
       <% ['origin', 'folder', 'url','create_date','visited_date','modified_date','name' ].each do |sort| %>
           <%= radio_button_tag 'sort', sort, @sort == sort,:checked => 'checked' %>
       <%= sort.humanize %>
       <% end %>
-      </div>
+      </fieldset>
       <%= label_tag(:sort_order, "Order Field:") %>
-      <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
       <% [ 'DESC', 'ASC' ].each do |sort_order| %>
           <%= radio_button_tag 'sort_order', sort_order, @sort_order == sort_order,:checked => 'checked' %>
           <%= sort_order.humanize %>
       <% end %>
-      </div>
+      </fieldset>
       <%=  submit_tag ( 'Sort') %>
   <% end %>
 </div>
