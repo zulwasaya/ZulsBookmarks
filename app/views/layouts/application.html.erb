@@ -18,6 +18,26 @@
 <%= yield %>
   <div data-role="footer">
 
+    <div data-role="navbar" data-position="fixed" data-iconpos="top" >
+
+      <ul>
+
+        <li> <%= link_to 'Fav' , favoritebookmarks_path, "data-icon"=>"star" %></li>
+
+        <li> <%= link_to 'Add' , new_bookmark_path, "data-icon"=>"plus" %></li>
+
+        <li><%= link_to 'List All', bookmarks_path %> </li>
+
+      </ul>
+      <ul>
+
+        <li><%= link_to 'Search', searchform_path %> </li>
+        <li><%= link_to 'Sort', sortform_path %> </li>
+        <li> <a href="#"data-icon="info"> About</a></li>
+
+      </ul>
+
+    </div>
     <h4>Digiserve Copyright 2013</h4>
     <!-- end .footer --></div>
 </div>

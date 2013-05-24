@@ -5,7 +5,8 @@ class BookmarksController < ApplicationController
   require 'logger'
   require "net/http"
 
-
+# Check that the user is logged in
+  before_filter :check_login_status!
 
 
 #       logger = Logger.new('log/logfile.log')
@@ -17,19 +18,31 @@ class BookmarksController < ApplicationController
 
 # GET /bookmarks
   # GET /bookmarks.json
+
+
+
   def index
 #    Bookmark.destroy_all
 #    @bookmarks = Bookmark.all
-    unless session[:user_id]
-      redirect_to root_url
-      return
-    end
+
 # Get all bookmarks related to user where the primary key of User record is in session[:user_id]
     @bookmarks =User.find(session[:user_id]).bookmarks
 
 
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render json: @bookmarks }
+    end
+  end
+
+  def favoritebookmarks
+#
+# Get all bookmarks related to user where the primary key of User record is in session[:user_id]
+    @bookmarks =User.find(session[:user_id]).bookmarks
+
+
+    respond_to do |format|
+      format.html { render "index.html.erb" }
       format.json { render json: @bookmarks }
     end
   end

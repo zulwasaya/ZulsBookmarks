@@ -17,41 +17,31 @@
     <p>  <%= "Sort results of sorting #{@sort_field} field with #{@sort_order}ending order" %> </p>
 <% end %>
   <%= link_to 'Logout', logout_path, {"data-icon" =>"back", "class" => "ui-btn-right"} %>
+
+  <div data-role="navbar" >
+
+    <ul>
+
+      <li><%= link_to 'Validate All', check_urls_path %> </li>
+
+      <li><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </li>
+    </ul>
+    <ul>
+
+      <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </li>
+
+      <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </li>
+
+    </ul>
+
+  </div>
+
+
 <!-- end .header --></div>
 
 <div data-role="content" data-theme="b" data-transition= "flip">
 
 
- <nav data-role="navbar" data-inset="false" >
-
-  <ul>
-
-
-  <li><%= link_to 'Search', searchform_path %> </li>
-
-  <li><%= link_to 'Sort', sortform_path %> </li>
-
-  <li><%= link_to 'Create', new_bookmark_path %> </li>
-
-
-  <li><%= link_to 'List All', bookmarks_path %> </li>
-
-  <li><%= link_to 'Validate All', check_urls_path %> </li>
-
-
-
-  <li><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </li>
-  </ul>
-
- <ul>
-
-  <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </li>
-
-  <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </li>
-
-</ul>
-
-</nav>
 
 
                                                                                                                         <br/>
@@ -59,11 +49,14 @@
 
 
   <div>
-   <ul data-role="listview" data-inset="true" data-theme="e">
-    <li><a href=<%= bookmark.url%> > <%=bookmark.url%> </a> </li>
+   <ul data-role="listview"  data-inset="true" data-theme="e">
+
+     <li><%= link_to bookmark.name, bookmark %> </li>
+     <li><%= link_to bookmark.url, bookmark.url %> </li>
+
      <div data-role="navbar"  data-inset="true">
        <ul>
-     <li><%= link_to 'Show', bookmark %> </li>
+
      <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
      <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
        </ul>
