@@ -18,19 +18,19 @@
 <% end %>
   <%= link_to 'Logout', logout_path, {"data-icon" =>"back", "class" => "ui-btn-right"} %>
 
-  <div data-role="navbar" >
+  <div data-role="navbar" data-iconpos="top" >
 
     <ul>
 
-      <li><%= link_to 'Validate All', check_urls_path %> </li>
+      <li><%= link_to 'Validate All', check_urls_path, "data-icon"=>"check" %> </li>
 
-      <li><%= link_to 'Delete All', destroy_all_path, data: { confirm: 'Are you sure?' } %> </li>
+      <li><%= link_to 'Delete All', destroy_all_path, "data-icon"=>"delete", data: { confirm: 'Are you sure?' } %> </li>
     </ul>
     <ul>
 
-      <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path %> </li>
+      <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path, "data-icon"=>"arrow-u" %> </li>
 
-      <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path %> </li>
+      <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path, "data-icon"=>"arrow-d" %> </li>
 
     </ul>
 
@@ -42,34 +42,26 @@
 <div data-role="content" data-theme="b" data-transition= "flip">
 
 
-
+  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="e">
 
                                                                                                                         <br/>
   <% @bookmarks.each do |bookmark| %>
 
 
-  <div>
-   <ul data-role="listview"  data-inset="true" data-theme="e">
-
      <li><%= link_to bookmark.name, bookmark %> </li>
      <li><%= link_to bookmark.url, bookmark.url %> </li>
 
      <div data-role="navbar"  data-inset="true">
-       <ul>
 
+       <ul>
      <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
      <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
        </ul>
+
      </div>
-
-   </ul>
-   </div>
-
-  </ul>
-
 <% end %>
-
-
+  </ul>
+</div>
 
   <!-- end .content --></div>
 

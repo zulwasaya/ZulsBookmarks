@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<div data-role="page" id="page">
+
   <%= image_tag "DigiserveLogo5.png", :width => "65%", :style => 'display: block; margin-left: auto; margin-right: auto;' %>
 
 <%= yield %>
@@ -26,13 +26,13 @@
 
         <li> <%= link_to 'Add' , new_bookmark_path, "data-icon"=>"plus" %></li>
 
-        <li><%= link_to 'List All', bookmarks_path %> </li>
+        <li><%= link_to 'List All', bookmarks_path, "data-icon"=>"refresh" %> </li>
 
       </ul>
       <ul>
 
-        <li><%= link_to 'Search', searchform_path %> </li>
-        <li><%= link_to 'Sort', sortform_path %> </li>
+        <li><%= link_to 'Search', searchform_path, "data-icon"=>"grid" %> </li>
+        <li><%= link_to 'Sort', sortform_path, "data-icon"=>"grid" %> </li>
         <li> <a href="#"data-icon="info"> About</a></li>
 
       </ul>
@@ -40,7 +40,7 @@
     </div>
     <h4>Digiserve Copyright 2013</h4>
     <!-- end .footer --></div>
-</div>
+
 
 </body>
 </html>
