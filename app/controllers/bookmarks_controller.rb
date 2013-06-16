@@ -15,6 +15,33 @@ class BookmarksController < ApplicationController
 #       logger.debug ("End of logfile.log")
 #       logger.close
 
+  def emailform
+
+    respond_to do |format|
+      format.html # emailform.html.erb
+      format.json { head :no_content }
+    end
+  end
+
+  # GET /mailbookmarks
+  # GET /mailbookmarks.json
+  def mailbookmarks
+    @email_string="#{params[:email_string]}"
+# Mail all bookmarks
+    @bookmarks =User.find(session[:user_id]).bookmarks.scoped
+    @bookmarks=@bookmarks.order(:name)
+
+    BookmarkMailer.bookmark_created(@bookmarks,@email_string).deliver
+
+
+
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @bookmarks  }
+    end
+  end
+
 
 # GET /bookmarks
   # GET /bookmarks.json
@@ -26,7 +53,8 @@ class BookmarksController < ApplicationController
 #    @bookmarks = Bookmark.all
 
 # Get all bookmarks related to user where the primary key of User record is in session[:user_id]
-    @bookmarks =User.find(session[:user_id]).bookmarks
+    @bookmarks =User.find(session[:user_id]).bookmarks.scoped
+    @bookmarks=@bookmarks.order(:name)
 
 
     respond_to do |format|
@@ -381,7 +409,8 @@ class BookmarksController < ApplicationController
         end
        end
 #      @bookmarks=Bookmark.all
-      @bookmarks = User.find(session[:user_id]).bookmarks
+      @bookmarks = User.find(session[:user_id]).bookmarks.scoped
+      @bookmarks=@bookmarks.order(:name)
       respond_to do |format|
         format.html { render 'index', notice: "Bookmarks were successfully created "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }

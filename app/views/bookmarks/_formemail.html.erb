@@ -1,0 +1,11 @@
+<div data-role="fieldcontain">
+<div class="form_email">
+  <%= form_tag({:action => :mailbookmarks} ,:method=>"get") do %>
+
+      <%= label_tag(:emailform, "Enter email address:") %>
+      <%= email_field_tag(:email_string) %>
+      <%=  submit_tag ( 'Send Email') %>
+  <% end %>
+
+  </div>
+  </div>

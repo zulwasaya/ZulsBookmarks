@@ -15,6 +15,8 @@ ZulsBookmarks::Application.routes.draw do
   match 'from_html_file' => 'bookmarks#from_html_file'
   match 'to_html_file' => 'bookmarks#to_html_file'
   match 'destroy_all' => 'bookmarks#destroy_all'
+  match '/emailform', :to => 'bookmarks#emailform'
+  match '/mailbookmarks', :to => 'bookmarks#mailbookmarks'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

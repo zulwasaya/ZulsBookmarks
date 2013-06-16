@@ -1,0 +1,17 @@
+<h1>The following Bookmarks have been created!</h1>
+
+<p>Hi, how are you? Just wanted to let you know that I have created
+the following Bookmarks for your consideration.</p>
+
+<h2>  ZulsBookmarks </h2>
+<blockquote>
+      <li>***</li>
+  <% @bookmarks.each do |mark| %>
+
+      <li> Name: <%=mark.name%></li>
+
+      <li><%= link_to mark.url, mark.url %> </li>
+      <li>***</li>
+  <% end %>
+</blockquote>
+<h2> END</h2>

@@ -1,0 +1,23 @@
+<div data-role="header">
+
+
+
+  <h4> Email Bookmarks  </h4>
+
+  <%= link_to 'Back', bookmarks_path(@bookmarks), {"data-icon" =>"back", "class" => "ui-btn-left"} %>
+
+  <!-- end .header --></div>
+
+<div data-role="content" data-theme="b" data-transition= "flip">
+  <ul  data-role="listview" data-inset="true" data-theme="a">
+
+
+
+
+<%= render 'formemail' %>
+
+
+
+
+  </ul>
+  <!-- end .content --></div>
