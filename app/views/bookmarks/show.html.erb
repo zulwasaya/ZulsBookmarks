@@ -6,7 +6,24 @@
 
   <h4> Show Bookmark</h4>
   <%= link_to 'Back', bookmarks_path, {"data-icon" =>"back", "class" => "ui-btn-left"} %>
-  <%= link_to  'Edit', edit_bookmark_path(@bookmark), {"data-icon" =>"star", "class" => "ui-btn-right"} %>
+
+
+  <div data-role="navbar" data-iconpos="top" >
+
+    <ul>
+
+
+
+      <li><%= link_to 'Edit', edit_bookmark_path(@bookmark) %> </li>
+      <li><%= link_to 'Delete', @bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+
+    </ul>
+
+
+  </div>
+
+  <p id="notice"><%= notice %></p>
 
   <!-- end .header --></div>
 
@@ -15,7 +32,7 @@
 
 
 
-<p id="notice"><%= notice %></p>
+
 
 
 <p>

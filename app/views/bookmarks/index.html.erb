@@ -49,16 +49,11 @@
 
 
      <li><%= link_to bookmark.name, bookmark %> </li>
-     <li><%= link_to bookmark.url, bookmark.url %> </li>
 
-     <div data-role="navbar"  data-inset="true">
 
-       <ul>
-     <li><%= link_to 'Edit', edit_bookmark_path(bookmark) %> </li>
-     <li><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-       </ul>
 
-     </div>
+
+
 <% end %>
   </ul>
 
