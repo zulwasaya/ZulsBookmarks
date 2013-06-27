@@ -1,0 +1,34 @@
+
+</head>
+<div data-role="header">
+
+
+<p><%=if $name
+         $name.capitalize
+       end
+%> Bookmarks</p>
+
+<p>Logged in through <%=if $provider
+                           $provider.capitalize end %></p>
+
+
+
+
+  <!-- end .header --></div>
+
+
+
+<div data-role="content" data-theme="b" data-transition= "flip" >
+
+  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="e">
+    <li> <h1>Zuls Bookmarks App</h1></li>
+    <li> This flexible app maitains Bookmark url lists. </li>
+    <li> Add bookmarks name and then Add the associated url. </li>
+    <li> Add as many bookmarks as required. </li>
+    <li> Bookmarks can be verified and emailed to any user.</li>
+
+ </ul>
+
+
+
+  <!-- end .content --></div>
