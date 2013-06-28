@@ -244,20 +244,19 @@ class BookmarksController < ApplicationController
 
 
     if @sort_field == 'create_date' or @sort_field == 'visited_date' or @sort_field == 'modified_date'
-      @bookmarks = User.find(session[:user_id]).bookmarks(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
 
-#      @bookmarks=Bookmark.all(:order => ("#{params[:sort]}" +" " + "#{params[:sort_order]}") )
-#      logger.debug ("date fields")
+      @bookmarks = User.find(session[:user_id]).bookmarks.order("#{params[:sort]}  #{params[:sort_order]} ")
+
+
     else
-      @bookmarks = User.find(session[:user_id]).bookmarks(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
 
-#      @bookmarks=Bookmark.all(:order => ("lower(#{@sort_field})" +" " + " #{@sort_order}") )
-#      logger.debug ("Non-date fields")
+      @bookmarks = User.find(session[:user_id]).bookmarks.order("lower(#{params[:sort]} ) #{params[:sort_order]} ")
+
+
     end
 
 
-#    logger.debug ("End of logfile.log")
-#    logger.close
+
      respond_to do |format|
        format.html { render "index" }# index.html.erb
        format.json { head :no_content }
@@ -271,7 +270,7 @@ class BookmarksController < ApplicationController
 
     @bookmarks = User.find(session[:user_id]).bookmarks.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
 
-#    @bookmarks=Bookmark.where("#{params[:target]} LIKE?","%#{params[:search_string]}%" )
+
 
     respond_to do |format|
       format.html { render "index" }# index.html.erb
