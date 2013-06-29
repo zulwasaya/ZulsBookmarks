@@ -21,7 +21,7 @@
   <div data-role="navbar" data-iconpos="top" >
 
     <ul>
-      <li><%= link_to 'Email Bookmarks',  emailform_path, {"data-icon" =>"grid", "data-ajax" =>"false"} %></li>
+      <li><%= link_to 'Email',  emailform_path, {"data-icon" =>"grid", "data-ajax" =>"false"} %></li>
 
       <li><%= link_to 'Validate All', check_urls_path, "data-icon"=>"check" %> </li>
 
@@ -31,9 +31,11 @@
     </ul>
     <ul>
 
-      <li><%= link_to 'Create Bookmarks from sample HTML file ', from_html_file_path, "data-icon"=>"arrow-u" %> </li>
+      <li><%= link_to 'Create from sample file ', from_sample_file_path, "data-icon"=>"arrow-u" %> </li>
 
-      <li><%= link_to 'Save Bookmarks database to HTML file ', to_html_file_path, "data-icon"=>"arrow-d" %> </li>
+      <li><%= link_to 'Create from temp file ', from_html_file_path, "data-icon"=>"arrow-u" %> </li>
+
+      <li><%= link_to 'Save to temp file ', to_html_file_path, "data-icon"=>"arrow-d" %> </li>
 
     </ul>
 

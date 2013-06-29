@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
 
   require 'open-uri'
   require 'date'
-  require 'logger'
+#  require 'logger'
   require "net/http"
 
 # Check that the user is logged in
@@ -342,9 +342,10 @@ class BookmarksController < ApplicationController
   end
 
 
-  def to_html_file
+  def to_html_file    # save bookmarks to internal file
 
-      file= "app/assets/bookmarks/bookmarks_output.html"
+#      file= "app/assets/bookmarks/bookmarks_output.html"
+      file= "app/assets/bookmarks/#{session[:user_id]}bookmarks_output.html"
       file = File.open(file, "w")
 # Order records by folder case insensitive before writing out file
 #      @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
@@ -370,7 +371,7 @@ class BookmarksController < ApplicationController
                           end
       end
       respond_to do |format|
-        format.html { render 'index', notice: "Bookmarks were successfully filed "}
+        format.html { render 'index', notice: "Bookmarks were successfully saved "}
         format.json { render json: @bookmark, status: :created, location: @bookmark }
 
         file.close unless file == nil
@@ -378,12 +379,12 @@ class BookmarksController < ApplicationController
       end
   end
 
-  def from_html_file  # to database
+  def from_html_file  # create bookmarks from saved file
 
 
 
-
-      file= "app/assets/bookmarks/bookmarks.html"
+      file= "app/assets/bookmarks/#{session[:user_id]}bookmarks_output.html"
+#      file= "app/assets/bookmarks/bookmarks.html"
 
       bookmarks = Markio::parse(File.open(file))
 
@@ -415,7 +416,46 @@ class BookmarksController < ApplicationController
         format.json { render json: @bookmark, status: :created, location: @bookmark }
       end
 
+  end
+
+  def from_sample_file  # create bookmarks from sample file
+
+
+
+
+    file= "app/assets/bookmarks/bookmarks.html"
+
+    bookmarks = Markio::parse(File.open(file))
+
+
+    bookmarks.each do |ref|
+
+
+      if ref.href
+        ref.href=ref.href.sub('https','http')
+        @bookmark=Bookmark.new
+        @bookmark.user_id= session[:user_id]
+        @bookmark.origin= 'From html file'
+        @bookmark.name=ref.title
+        @bookmark.url=ref.href
+        @bookmark.folder=ref.folders.uniq
+        @bookmark.create_date=ref.add_date
+        @bookmark.visited_date=ref.last_visit
+        @bookmark.modified_date=ref.last_modified
+        @bookmark.save
+
+
       end
+    end
+#      @bookmarks=Bookmark.all
+    @bookmarks = User.find(session[:user_id]).bookmarks.scoped
+    @bookmarks=@bookmarks.order(:name)
+    respond_to do |format|
+      format.html { render 'index', notice: "Bookmarks were successfully created "}
+      format.json { render json: @bookmark, status: :created, location: @bookmark }
+    end
+
+  end
   end
 
 

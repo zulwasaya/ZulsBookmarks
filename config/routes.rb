@@ -13,6 +13,7 @@ ZulsBookmarks::Application.routes.draw do
   match 'searchbookmarks' => 'bookmarks#searchbookmarks'
   match 'favoritebookmarks' => 'bookmarks#favoritebookmarks'
   match 'from_html_file' => 'bookmarks#from_html_file'
+  match 'from_sample_file' => 'bookmarks#from_sample_file'
   match 'to_html_file' => 'bookmarks#to_html_file'
   match 'destroy_all' => 'bookmarks#destroy_all'
   match '/emailform', :to => 'bookmarks#emailform'
