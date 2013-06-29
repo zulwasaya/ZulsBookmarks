@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/_formsearch.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/_formsearch.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/show.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/about.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/about.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372514652995" ignored="false" />
+    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372520547362" ignored="false" />
     <file path="/Gemfile" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1365142992443" ignored="false" />
     <file path="/bookmarks_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372448368318" ignored="false" />
     <file path="/sessions_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1369147691439" ignored="false" />
@@ -75,7 +72,7 @@
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todo_mailer/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372340016964" ignored="false" />
     <file path="/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372339920525" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372343346511" ignored="false" />
-    <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372343077281" ignored="false" />
+    <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372521494375" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_formsort.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_formsort.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="8" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.45637584">
+            <state line="32" column="8" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-10.269231">
               <folding />
             </state>
           </provider>
@@ -180,10 +177,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="about.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="44" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+            <state line="26" column="49" selection-start="605" selection-end="605" vertical-scroll-proportion="0.2852853">
               <folding />
             </state>
           </provider>
@@ -223,11 +220,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/bookmarks/about.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/bookmarks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/_formsearch.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/bookmarks/about.html.erb" />
       </list>
     </option>
   </component>
@@ -1124,7 +1121,11 @@
       <created>1372455477259</created>
       <updated>1372455477259</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="used jquery mobile syntax for sort and search">
+      <created>1372520557229</created>
+      <updated>1372520557229</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1151,22 +1152,22 @@
     <frame x="78" y="43" width="1200" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.25902668" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688928" sideWeight="0.6418384" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688928" sideWeight="0.6788553" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.38147566" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35816166" sideWeight="0.99907833" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32171157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35816166" sideWeight="0.99907833" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32114467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.6593407" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1215,7 +1216,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated sort and search" />
+    <option name="LAST_COMMIT_MESSAGE" value="used jquery mobile syntax for sort and search" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1235,6 +1236,7 @@
     <MESSAGE value="updated mail message" />
     <MESSAGE value="updated about info" />
     <MESSAGE value="updated sort and search" />
+    <MESSAGE value="used jquery mobile syntax for sort and search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1275,13 +1277,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="44" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1335,7 +1330,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.45637584">
+        <state line="32" column="8" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-10.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="49" selection-start="605" selection-end="605" vertical-scroll-proportion="0.2852853">
           <folding />
         </state>
       </provider>
