@@ -7,7 +7,7 @@
     </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372520547362" ignored="false" />
+    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372521530427" ignored="false" />
     <file path="/Gemfile" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1365142992443" ignored="false" />
     <file path="/bookmarks_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372448368318" ignored="false" />
     <file path="/sessions_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1369147691439" ignored="false" />
@@ -72,7 +72,7 @@
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todo_mailer/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372340016964" ignored="false" />
     <file path="/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372339920525" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372343346511" ignored="false" />
-    <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372521494375" ignored="false" />
+    <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372522060994" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +180,7 @@
       <file leaf-file-name="about.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="49" selection-start="605" selection-end="605" vertical-scroll-proportion="0.2852853">
+            <state line="26" column="81" selection-start="636" selection-end="636" vertical-scroll-proportion="0.23423423">
               <folding />
             </state>
           </provider>
@@ -1125,7 +1125,11 @@
       <created>1372520557229</created>
       <updated>1372520557229</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated about file">
+      <created>1372521538395</created>
+      <updated>1372521538395</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1216,7 +1220,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="used jquery mobile syntax for sort and search" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated about file" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1237,6 +1241,7 @@
     <MESSAGE value="updated about info" />
     <MESSAGE value="updated sort and search" />
     <MESSAGE value="used jquery mobile syntax for sort and search" />
+    <MESSAGE value="updated about file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1337,7 +1342,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="605" selection-end="605" vertical-scroll-proportion="0.2852853">
+        <state line="26" column="81" selection-start="636" selection-end="636" vertical-scroll-proportion="0.23423423">
           <folding />
         </state>
       </provider>
