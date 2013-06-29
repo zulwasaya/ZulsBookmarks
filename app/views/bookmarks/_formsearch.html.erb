@@ -2,18 +2,38 @@
 <div class="form_search">
   <%= form_tag({:action => :searchbookmarks} ,:method=>"get") do %>
       <%= label_tag(:target, "Search field:") %>
+
       <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
 
-      <% ['origin', 'folder', 'url', 'name' ].each do |target| %>
 
-          <%= radio_button_tag 'target', target, @target == target,:checked => 'checked' %>
-      <%= target.humanize %>
+          <input  id="target_origin" name="target" type="radio" value="origin" />
 
-      <% end %>
+          <label for="target_origin">Origin</label>
+
+
+
+          <input  id="target_folder" name="target" type="radio" value="folder" />
+
+          <label for="target_folder">Folder</label>
+
+
+
+          <input  id="target_url" name="target" type="radio" value="url" />
+          <label for="target_url">Url</label>
+
+
+
+
+          <input checked="checked" id="target_name" name="target" type="radio" value="name" />
+          <label for="target_name">Name</label>
+
+
+
         </fieldset>
       </div>
-      <%= label_tag(:searchform, "Search for string:") %>
+      <%= label_tag(:searchform, "Search for string in the selected field:") %>
+      </br>
       <%= text_field_tag(:search_string) %>
       <%=  submit_tag ( 'Search') %>
   <% end %>

@@ -3,17 +3,38 @@
   <%= form_tag({:action => :sortbookmarks} ,:method=>"get") do %>
       <%= label_tag(:sort, "Sort By:") %>
       <fieldset data-role="controlgroup">
-      <% ['origin', 'folder', 'url','create_date','visited_date','modified_date','name' ].each do |sort| %>
-          <%= radio_button_tag 'sort', sort, @sort == sort,:checked => 'checked' %>
-      <%= sort.humanize %>
-      <% end %>
+        <input checked="checked" id="sort_name" name="sort" type="radio" value="name" />
+        <label for="sort_name">Name</label>
+
+        <input  id="sort_origin" name="sort" type="radio" value="origin" />
+        <label for="sort_origin">Origin</label>
+
+        <input  id="sort_folder" name="sort" type="radio" value="folder" />
+        <label for="sort_folder">Folder</label>
+
+        <input  id="sort_url" name="sort" type="radio" value="url" />
+        <label for="sort_url">Url</label>
+
+        <input  id="sort_create_date" name="sort" type="radio" value="create_date" />
+        <label for="sort_create_date">Create date</label>
+
+        <input  id="sort_visited_date" name="sort" type="radio" value="visited_date" />
+        <label for="sort_visited_date">Visited date</label>
+
+        <input  id="sort_modified_date" name="sort" type="radio" value="modified_date" />
+        <label for="sort_modified_date">Modified date</label>
+
       </fieldset>
-      <%= label_tag(:sort_order, "Order Field:") %>
+      <label for="sort_order">Order Field:</label>
       <fieldset data-role="controlgroup">
-      <% [ 'DESC', 'ASC' ].each do |sort_order| %>
-          <%= radio_button_tag 'sort_order', sort_order, @sort_order == sort_order,:checked => 'checked' %>
-          <%= sort_order.humanize %>
-      <% end %>
+
+        <input checked="checked" id="sort_order_ASC" name="sort_order" type="radio" value="ASC" />
+        <label for="sort_order_ASC">Ascending</label>
+
+        <input  id="sort_order_DESC" name="sort_order" type="radio" value="DESC" />
+        <label for="sort_order_DESC">Descending</label>
+
+
       </fieldset>
       <%=  submit_tag ( 'Sort') %>
   <% end %>
