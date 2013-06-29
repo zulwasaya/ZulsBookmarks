@@ -349,7 +349,10 @@ class BookmarksController < ApplicationController
       file = File.open(file, "w")
 # Order records by folder case insensitive before writing out file
 #      @bookmarks=Bookmark.all(:order => 'lower(folder) ASC')
-      @bookmarks = User.find(session[:user_id]).bookmarks(:order => 'lower(folder) ASC')
+#      @bookmarks = User.find(session[:user_id]).bookmarks(:order => 'lower(folder) ASC')
+
+    @bookmarks = User.find(session[:user_id]).bookmarks.scoped
+    @bookmarks=@bookmarks.order(:name)
 
 
       if @bookmarks.each do |mark|
