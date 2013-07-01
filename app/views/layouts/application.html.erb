@@ -18,23 +18,23 @@
 <%= yield %>
   <div data-role="footer">
 
-    <div data-role="navbar" data-position="fixed" data-iconpos="top" >
+    <div data-role="navbar" data-position="fixed" data-iconpos="top">
 
       <ul>
 
-        <li> <%= link_to 'Fav' , favoritebookmarks_path, "data-icon"=>"star" %></li>
+        <li> <%= link_to 'Fav' , favoritebookmarks_path, "data-icon"=>"star", "data-theme"=>"b" %></li>
 
-        <li> <%= link_to 'Add' , new_bookmark_path, "data-icon"=>"plus" %></li>
+        <li> <%= link_to 'Add' , new_bookmark_path, "data-icon"=>"plus", "data-theme"=>"b" %></li>
 
-        <li><%= link_to 'List All', bookmarks_path, "data-ajax" =>"false", "data-icon"=>"refresh" %> </li>
+        <li><%= link_to 'List All', bookmarks_path, "data-ajax" =>"false", "data-icon"=>"refresh", "data-theme"=>"b" %> </li>
 
       </ul>
       <ul>
 
-        <li><%= link_to 'Search', searchform_path, "data-icon"=>"grid" %> </li>
-        <li><%= link_to 'Sort', sortform_path, "data-icon"=>"grid" %> </li>
-        <li><%= link_to 'Logout', logout_path, "data-icon" =>"back" %></li>
-        <li><%= link_to 'About', about_path, "data-icon" => "info" %></li>
+        <li><%= link_to 'Search', searchform_path, "data-icon"=>"grid", "data-theme"=>"b" %> </li>
+        <li><%= link_to 'Sort', sortform_path, "data-icon"=>"grid", "data-theme"=>"b" %> </li>
+        <li><%= link_to 'Logout', logout_path, "data-icon" =>"back", "data-theme"=>"b" %></li>
+        <li><%= link_to 'About', about_path, "data-icon" => "info", "data-theme"=>"b" %></li>
 
 
       </ul>

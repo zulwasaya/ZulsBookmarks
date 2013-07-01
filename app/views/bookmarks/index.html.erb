@@ -21,21 +21,21 @@
   <div data-role="navbar" data-iconpos="top" >
 
     <ul>
-      <li><%= link_to 'Email',  emailform_path, {"data-icon" =>"grid", "data-ajax" =>"false"} %></li>
+      <li><%= link_to 'Email',  emailform_path, {"data-icon" =>"grid", "data-ajax" =>"false", "data-theme"=>"b"} %></li>
 
-      <li><%= link_to 'Validate All', check_urls_path, "data-icon"=>"check" %> </li>
+      <li><%= link_to 'Validate All', check_urls_path, "data-icon"=>"check", "data-theme"=>"b" %> </li>
 
-      <li><%= link_to 'Delete All', destroy_all_path, "data-icon"=>"delete", data: { confirm: 'Are you sure?' } %> </li>
+      <li><%= link_to 'Delete All', destroy_all_path, "data-icon"=>"delete", "data-theme"=>"b", data: { confirm: 'Are you sure?' } %> </li>
 
 
     </ul>
     <ul>
 
-      <li><%= link_to 'From sample file ', from_sample_file_path, "data-icon"=>"arrow-u" %> </li>
+      <li><%= link_to 'From sample file ', from_sample_file_path, "data-icon"=>"arrow-u", "data-theme"=>"b" %> </li>
 
-      <li><%= link_to 'From temp file ', from_html_file_path, "data-icon"=>"arrow-u" %> </li>
+      <li><%= link_to 'From temp file ', from_html_file_path, "data-icon"=>"arrow-u", "data-theme"=>"b" %> </li>
 
-      <li><%= link_to 'Save to temp file ', to_html_file_path, "data-icon"=>"arrow-d" %> </li>
+      <li><%= link_to 'Save to temp file ', to_html_file_path, "data-icon"=>"arrow-d", "data-theme"=>"b" %> </li>
 
     </ul>
 
