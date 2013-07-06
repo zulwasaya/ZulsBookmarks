@@ -4,7 +4,7 @@
 <p><%=if $name
          $name.capitalize
        end
-%> Bookmarks </p>
+ @bookmarks.size%> Bookmarks </p>
 
 <p>Logged in through <%=if $provider
                            $provider.capitalize end %></p>

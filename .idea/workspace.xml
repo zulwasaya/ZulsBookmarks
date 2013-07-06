@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/bookmarks/2bookmarks_output.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" afterPath="$PROJECT_DIR$/app/views/bookmarks/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373045600648" ignored="false" />
+    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373116585991" ignored="false" />
     <file path="/Gemfile" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1365142992443" ignored="false" />
     <file path="/bookmarks_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372541433446" ignored="false" />
     <file path="/sessions_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1369147691439" ignored="false" />
@@ -22,7 +23,7 @@
     <file path="/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1368955152518" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/sessions/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1368920706930" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/layouts/application.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372682245836" ignored="false" />
-    <file path="/index.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373047060560" ignored="false" />
+    <file path="/index.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373116918107" ignored="false" />
     <file path="/edit.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690545698" ignored="false" />
     <file path="/new.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690562152" ignored="false" />
     <file path="/show.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690682437" ignored="false" />
@@ -71,7 +72,7 @@
     <file path="/production.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1371352625609" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todo_mailer/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372340016964" ignored="false" />
     <file path="/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372339920525" ignored="false" />
-    <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690511832" ignored="false" />
+    <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373116864343" ignored="false" />
     <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372700396156" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todolists/edit.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690004663" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todolists/new.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372689990062" ignored="false" />
@@ -106,7 +107,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="78" selection-start="774" selection-end="774" vertical-scroll-proportion="-15.153846">
+            <state line="28" column="78" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,7 +125,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="85" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-8.615385">
+            <state line="36" column="85" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +134,16 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="11" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.45333335">
+            <state line="6" column="3" selection-start="89" selection-end="89" vertical-scroll-proportion="0.1954023">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2bookmarks_output.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/bookmarks/2bookmarks_output.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -151,7 +161,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="10" selection-start="1007" selection-end="1085" vertical-scroll-proportion="-6.3076925">
+            <state line="68" column="10" selection-start="1007" selection-end="1085" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,15 +180,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_formsort.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="42" column="4" selection-start="1658" selection-end="1664" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_formedit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_formedit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="4" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,8 +244,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-33" />
-    <option name="y" value="1" />
+    <option name="x" value="9" />
+    <option name="y" value="43" />
     <option name="width" value="1252" />
     <option name="height" value="765" />
   </component>
@@ -274,26 +275,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zulsearch" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -628,21 +609,41 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zulsearch" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TodoList/TodoList" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -870,6 +871,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -899,13 +907,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -1120,7 +1121,11 @@
       <created>1372702582011</created>
       <updated>1372702582011</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added url in main list with blue theme.">
+      <created>1373047207570</created>
+      <updated>1373047207570</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1144,19 +1149,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-33" y="1" width="1252" height="765" extended-state="0" />
+    <frame x="9" y="43" width="1252" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.25902668" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30252102" sideWeight="0.64705884" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30756304" sideWeight="0.64705884" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.38147566" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3529412" sideWeight="0.9983647" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3163752" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3529412" sideWeight="0.9983647" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537244" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1211,7 +1216,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed add and edit submit button to theme=&quot;b&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added url in main list with blue theme." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1239,6 +1244,7 @@
     <MESSAGE value="sync all themes" />
     <MESSAGE value="updated about file." />
     <MESSAGE value="changed add and edit submit button to theme=&quot;b&quot;" />
+    <MESSAGE value="added url in main list with blue theme." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1246,13 +1252,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/emailform.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="116" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" />
@@ -1265,16 +1264,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/searchform.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="104" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="104" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="38" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/about.html.erb">
@@ -1321,7 +1316,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="78" selection-start="774" selection-end="774" vertical-scroll-proportion="-15.153846">
+        <state line="28" column="78" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1335,21 +1330,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="85" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-8.615385">
+        <state line="36" column="85" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="10" selection-start="1007" selection-end="1085" vertical-scroll-proportion="-6.3076925">
+        <state line="68" column="10" selection-start="1007" selection-end="1085" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/bookmarks/2bookmarks_output.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bookmarks/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="11" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.45333335">
+        <state line="6" column="3" selection-start="89" selection-end="89" vertical-scroll-proportion="0.1954023">
           <folding />
         </state>
       </provider>
