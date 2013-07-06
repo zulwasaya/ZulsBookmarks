@@ -3,11 +3,11 @@
 
 <p><%=if $name
          $name.capitalize
-       end
- @bookmarks.size%> Bookmarks </p>
-
+       end %>
+</p>
 <p>Logged in through <%=if $provider
                            $provider.capitalize end %></p>
+<p> <%= @bookmarks.size %>  Bookmarks </p>
 
 
 <% if @search_string and @search_target then %>
