@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/github.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/linkedin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/twitter.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374162553785" ignored="false" />
+    <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374163654894" ignored="false" />
     <file path="/Gemfile" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1365142992443" ignored="false" />
     <file path="/bookmarks_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372541433446" ignored="false" />
     <file path="/sessions_controller.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1369147691439" ignored="false" />
@@ -23,8 +19,8 @@
     <file path="/session_store.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1366438040385" ignored="false" />
     <file path="/application.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372680478274" ignored="false" />
     <file path="/routes.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372537999481" ignored="false" />
-    <file path="/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373393156313" ignored="false" />
-    <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/sessions/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374162509329" ignored="false" />
+    <file path="/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374163914739" ignored="false" />
+    <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/sessions/new.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374163694180" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/layouts/application.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372682245836" ignored="false" />
     <file path="/index.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1373118325952" ignored="false" />
     <file path="/edit.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690545698" ignored="false" />
@@ -75,7 +71,7 @@
     <file path="/production.rb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1371352625609" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todo_mailer/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372340016964" ignored="false" />
     <file path="/todo_created.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372339920525" ignored="false" />
-    <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374162956348" ignored="false" />
+    <file path="$PROJECT_DIR$/../../TodoList/TodoList/.idea/workspace.xml" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1374163918682" ignored="false" />
     <file path="/about.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372700396156" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todolists/edit.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372690004663" ignored="false" />
     <file path="$PROJECT_DIR$/../../TodoList/TodoList/app/views/todolists/new.html.erb" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1372689990062" ignored="false" />
@@ -146,7 +142,7 @@
       <file leaf-file-name="new.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/sessions/new.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.3908046">
+            <state line="28" column="6" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.83435583">
               <folding />
             </state>
           </provider>
@@ -247,8 +243,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="y" value="4" />
+    <option name="x" value="6" />
+    <option name="y" value="6" />
     <option name="width" value="1251" />
     <option name="height" value="765" />
   </component>
@@ -1158,7 +1154,11 @@
       <created>1373118442173</created>
       <updated>1373118442173</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added social media icons on login page">
+      <created>1374163021737</created>
+      <updated>1374163021737</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1182,25 +1182,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="4" width="1251" height="765" extended-state="0" />
+    <frame x="6" y="6" width="1251" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.25902668" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3313709" sideWeight="0.6877971" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3313709" sideWeight="0.68839425" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22809787" sideWeight="0.38147566" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3529412" sideWeight="0.9983647" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31220284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31160572" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31537244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.6593407" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1249,7 +1249,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug bookmarks size" />
+    <option name="LAST_COMMIT_MESSAGE" value="added social media icons on login page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1280,6 +1280,7 @@
     <MESSAGE value="added url in main list with blue theme." />
     <MESSAGE value="Added bookmarks size" />
     <MESSAGE value="fixed bug bookmarks size" />
+    <MESSAGE value="added social media icons on login page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1382,7 +1383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.3908046">
+        <state line="28" column="6" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.83435583">
           <folding />
         </state>
       </provider>
