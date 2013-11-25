@@ -2,33 +2,33 @@ ZulsBookmarks::Application.routes.draw do
   resources :bookmarks
   root :to => 'sessions#new'
 #  get   '/login', :to => 'sessions#new', :as => :login
-  match '/auth/:provider/callback', :to => 'sessions#create'
-  match '/auth/failure', :to => 'sessions#failure'
+  get '/auth/:provider/callback', :to => 'sessions#create'
+  get '/auth/failure', :to => 'sessions#failure'
   get '/logout', :to => 'sessions#destroy'
 
-  match 'check_urls' => 'bookmarks#check_urls'
-  match 'sortform' => 'bookmarks#sortform'
-  match 'sortbookmarks' => 'bookmarks#sortbookmarks'
-  match 'searchform' => 'bookmarks#searchform'
-  match 'searchbookmarks' => 'bookmarks#searchbookmarks'
-  match 'favoritebookmarks' => 'bookmarks#favoritebookmarks'
-  match 'from_html_file' => 'bookmarks#from_html_file'
-  match 'from_sample_file' => 'bookmarks#from_sample_file'
-  match 'to_html_file' => 'bookmarks#to_html_file'
-  match 'destroy_all' => 'bookmarks#destroy_all'
-  match '/emailform', :to => 'bookmarks#emailform'
-  match '/mailbookmarks', :to => 'bookmarks#mailbookmarks'
+  get 'check_urls' => 'bookmarks#check_urls'
+  get 'sortform' => 'bookmarks#sortform'
+  get 'sortbookmarks' => 'bookmarks#sortbookmarks'
+  get 'searchform' => 'bookmarks#searchform'
+  get 'searchbookmarks' => 'bookmarks#searchbookmarks'
+  get 'favoritebookmarks' => 'bookmarks#favoritebookmarks'
+  get 'from_html_file' => 'bookmarks#from_html_file'
+  get 'from_sample_file' => 'bookmarks#from_sample_file'
+  get 'to_html_file' => 'bookmarks#to_html_file'
+  get 'destroy_all' => 'bookmarks#destroy_all'
+  get '/emailform', :to => 'bookmarks#emailform'
+  get '/mailbookmarks', :to => 'bookmarks#mailbookmarks'
   get '/about', :to => 'bookmarks#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  #   get 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  #   get 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
@@ -75,5 +75,5 @@ ZulsBookmarks::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  # get ':controller(/:action(/:id))(.:format)'
 end
