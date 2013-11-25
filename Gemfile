@@ -11,8 +11,7 @@ group :production do
   gem 'pg'
 # for Heroku to use assets with rails4
   gem 'rails_12factor'
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+  ruby '2.0.0'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
