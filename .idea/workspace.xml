@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="" />
+    <list default="true" id="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zulsearch.iml" afterPath="$PROJECT_DIR$/.idea/zulsearch.iml" />
+    </list>
     <ignored path="zulsearch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b695c4ff-0c1d-4b08-be8a-4f8175f2708c" time="1385342578527" ignored="false" />
@@ -125,7 +130,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="259" selection-end="259" vertical-scroll-proportion="0.44">
+            <state line="14" column="79" selection-start="432" selection-end="432" vertical-scroll-proportion="0.56">
               <folding />
             </state>
           </provider>
@@ -181,8 +186,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="24" />
+    <option name="x" value="142" />
+    <option name="y" value="39" />
     <option name="width" value="1251" />
     <option name="height" value="744" />
   </component>
@@ -1050,7 +1055,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="24" width="1251" height="744" extended-state="0" />
+    <frame x="142" y="39" width="1251" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3117932" sideWeight="0.49958438" order="9" side_tool="false" content_ui="tabs" />
@@ -1256,7 +1261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="259" selection-end="259" vertical-scroll-proportion="0.44">
+        <state line="14" column="79" selection-start="432" selection-end="432" vertical-scroll-proportion="0.56">
           <folding />
         </state>
       </provider>
