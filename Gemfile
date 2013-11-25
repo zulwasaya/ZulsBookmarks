@@ -9,6 +9,8 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+# for Heroku to use assets with rails4
+  gem 'rails_12factor'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
